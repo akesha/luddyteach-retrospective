@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import cosine_distances
 from scipy import stats
 
@@ -56,12 +57,33 @@ def score_posts(posts, dictionaries):
 
 
 def run_pca(matrix, posts, themes):
-    """Run PCA on z-scored theme matrix."""
+    """Run PCA on z-scored theme matrix with clustering."""
     scaler = StandardScaler()
     z_scored = scaler.fit_transform(matrix)
 
     pca = PCA(n_components=2)
     coords = pca.fit_transform(z_scored)
+
+    # Cluster posts into 4 groups (like SLL's Landscape/Vision/Enablers/Dynamics)
+    kmeans = KMeans(n_clusters=4, random_state=42, n_init=10)
+    clusters = kmeans.fit_predict(z_scored)
+
+    # Name clusters by their dominant themes
+    cluster_names = []
+    for c in range(4):
+        mask = clusters == c
+        mean_scores = matrix[mask].mean(axis=0)
+        top_themes = mean_scores.argsort()[::-1][:2]
+        name = " & ".join(themes[t].replace("_", " ").title() for t in top_themes)
+        cluster_names.append(name)
+
+    # Compute cluster centroids in PCA space for region labels
+    cluster_centroids = []
+    for c in range(4):
+        mask = clusters == c
+        cx = float(coords[mask, 0].mean())
+        cy = float(coords[mask, 1].mean())
+        cluster_centroids.append({"x": round(cx, 2), "y": round(cy, 2), "name": cluster_names[c]})
 
     # Get loadings for axis labels
     loadings = pd.DataFrame(
@@ -76,17 +98,29 @@ def run_pca(matrix, posts, themes):
         "explained_variance": [round(v * 100, 1) for v in pca.explained_variance_ratio_],
         "pc1_label": " / ".join(t.replace("_", " ").title() for t in pc1_top),
         "pc2_label": " / ".join(t.replace("_", " ").title() for t in pc2_top),
+        "clusters": [{"name": cluster_names[i], "centroid": cluster_centroids[i]} for i in range(4)],
         "points": []
     }
 
     for i, post in enumerate(posts):
+        # Get top 3 and bottom 2 theme scores for "WHY HERE?" panel
+        scores = matrix[i]
+        sorted_idx = scores.argsort()[::-1]
+        top_themes = [{"name": themes[j].replace("_", " ").title(), "score": round(float(scores[j]), 2)} for j in sorted_idx[:3]]
+        low_themes = [{"name": themes[j].replace("_", " ").title(), "score": round(float(scores[j]), 2)} for j in sorted_idx[-2:]]
+
         result["points"].append({
             "id": post["id"],
             "title": post["title"],
+            "summary": post["summary"],
             "category": post["category"],
+            "cluster": int(clusters[i]),
+            "clusterName": cluster_names[int(clusters[i])],
             "x": round(float(coords[i, 0]), 4),
             "y": round(float(coords[i, 1]), 4),
             "date": post["date"],
+            "topThemes": top_themes,
+            "lowThemes": low_themes,
         })
 
     return result, z_scored
