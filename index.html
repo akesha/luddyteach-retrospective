@@ -95,27 +95,35 @@
   <section id="correlations" class="section content-section">
     <div class="content-column">
       <h2>Alliances &amp; Rivalries</h2>
-      <p>Some themes naturally travel together; others rarely appear in the same post. This heatmap shows the correlation between all 15 keyword dictionaries across the corpus.</p>
+      <p>Some themes naturally travel together; others rarely appear in the same post. This network shows the significant correlations between all 15 keyword dictionaries. Green solid lines are alliances (themes that co-occur). Red dashed lines are rivalries (themes that trade off). Drag nodes to explore the structure.</p>
     </div>
-    <div class="chart-container">
+    <div class="chart-container wide">
       <div id="corr-chart"></div>
     </div>
+  </section>
+
+  <!-- Diversity -->
+  <section id="diversity" class="section content-section">
     <div class="content-column">
-      <p class="chart-caption">Red cells indicate themes that co-occur (alliances). Blue cells indicate themes that tend to appear in different posts (rivalries). Strong correlations reveal the blog's underlying intellectual structure.</p>
+      <h2>How Broad Was Each Post?</h2>
+      <p>Some posts spread their energy across many themes (high diversity). Others concentrate on just one or two (low diversity). <strong>Shannon entropy</strong> captures this in a single number &mdash; a measure of how evenly a post's thematic energy is distributed.</p>
+    </div>
+    <div class="chart-container wide">
+      <div id="entropy-chart"></div>
+    </div>
+    <div class="content-column">
+      <p class="chart-caption" id="entropy-caption">Each dot is a post. The red line shows the moving average. Higher means more thematically diverse.</p>
     </div>
   </section>
 
   <!-- Novelty -->
   <section id="novelty" class="section content-section">
     <div class="content-column">
-      <h2>Surprise Conversations</h2>
-      <p>Novelty measures how much a post departs from what was typical in the corpus. High-novelty posts explored unusual combinations of themes or ventured into territory the blog rarely covered.</p>
+      <h2>The Posts That Broke the Mold</h2>
+      <p>Novelty measures how far each post's thematic profile deviates from its neighbors in the corpus. The tallest bars are the posts that surprised &mdash; the ones that combined themes in ways the blog rarely did.</p>
     </div>
-    <div class="chart-container">
+    <div class="chart-container wide">
       <div id="novelty-chart"></div>
-    </div>
-    <div class="content-column">
-      <p class="chart-caption">The most novel posts often sit at the edges of the PCA landscape. The most typical posts anchor the center.</p>
     </div>
   </section>
 
@@ -136,6 +144,9 @@
 
       <h3>Correlation Analysis</h3>
       <p>Pearson correlations computed between all 105 theme pairs. Significance tested at p &lt; 0.05 with a minimum |r| &gt; 0.15 threshold.</p>
+
+      <h3>Thematic Diversity (Shannon Entropy)</h3>
+      <p>Each post's theme scores are normalized to a probability distribution. Shannon entropy H = &minus;&Sigma; p&middot;log&sub2;(p) measures how evenly scores spread across themes. Normalized to [0, 1] where 1 = maximum diversity.</p>
 
       <h3>Novelty Scoring</h3>
       <p>Composite of two measures: (1) Euclidean distance from the corpus centroid in z-score space, and (2) mean pairwise cosine distance to all other posts. Both normalized to [0, 1] and averaged.</p>
@@ -194,6 +205,7 @@
   <script src="js/streamgraph.js"></script>
   <script src="js/pca.js"></script>
   <script src="js/correlations.js"></script>
+  <script src="js/entropy.js"></script>
   <script src="js/novelty.js"></script>
   <script src="js/main.js"></script>
 </body>

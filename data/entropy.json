@@ -1,0 +1,618 @@
+[
+  {
+    "id": "finks-taxonomy",
+    "title": "Beyond Bloom's: How Fink's Taxonomy Transforms CS Course Design",
+    "category": "Course Design",
+    "entropy": 0.7213,
+    "dominant": "Metacognition",
+    "date": "2025-01-10"
+  },
+  {
+    "id": "feedback-strategies",
+    "title": "Four Strategies for High-Impact Feedback Without Burning Out",
+    "category": "Assessment & Feedback",
+    "entropy": 0.6043,
+    "dominant": "Feedback Practices",
+    "date": "2025-01-17"
+  },
+  {
+    "id": "industry-relevance",
+    "title": "Making Your Course Matter: Three Strategies for Industry Relevance",
+    "category": "Teaching Strategies",
+    "entropy": 0.5181,
+    "dominant": "Industry Connection",
+    "date": "2025-01-24"
+  },
+  {
+    "id": "canvas-ai-pages",
+    "title": "Stop Fighting the Editor: Beautiful Canvas Pages in Seconds with AI",
+    "category": "AI & Technology",
+    "entropy": 0.4066,
+    "dominant": "Course Setup",
+    "date": "2025-01-31"
+  },
+  {
+    "id": "flipped-classroom",
+    "title": "The Flipped Tech Classroom: From Passive Lectures to Active Learning",
+    "category": "Teaching Strategies",
+    "entropy": 0.6889,
+    "dominant": "Technology Tools",
+    "date": "2025-02-07"
+  },
+  {
+    "id": "week-one-tech-setup",
+    "title": "Week 1: Setting the Tech Tone for Your Course",
+    "category": "Teaching Strategies",
+    "entropy": 0.7187,
+    "dominant": "Communication",
+    "date": "2025-02-14"
+  },
+  {
+    "id": "joyful-teaching",
+    "title": "Books for Joyful Teaching: A Curated Reading List for Faculty",
+    "category": "Faculty Wellbeing",
+    "entropy": 0.5137,
+    "dominant": "Student Wellbeing",
+    "date": "2025-02-21"
+  },
+  {
+    "id": "ai-resources-guide",
+    "title": "A Curated Guide to AI Resources for CS Faculty",
+    "category": "AI & Technology",
+    "entropy": 0.6082,
+    "dominant": "Ai Tools",
+    "date": "2025-02-28"
+  },
+  {
+    "id": "teaching-for-integrity-ai",
+    "title": "Teaching for Integrity in the Age of AI: From Compliance to Culture",
+    "category": "AI & Technology",
+    "entropy": 0.7774,
+    "dominant": "Communication",
+    "date": "2025-03-01"
+  },
+  {
+    "id": "improve-attendance",
+    "title": "Possible Ways to Improve Attendance and Clarification on Last Week's Post",
+    "category": "Student Engagement",
+    "entropy": 0.7323,
+    "dominant": "Student Motivation",
+    "date": "2025-03-08"
+  },
+  {
+    "id": "navigating-attendance-challenges",
+    "title": "Navigating Attendance Challenges in the Modern Classroom: Practical Tips for Faculty",
+    "category": "Student Engagement",
+    "entropy": 0.8164,
+    "dominant": "Student Motivation",
+    "date": "2025-03-15"
+  },
+  {
+    "id": "academia-industry-partnerships",
+    "title": "Building a Framework for Academia-Industry Partnerships and AI Teaching Podcasts",
+    "category": "Course Design",
+    "entropy": 0.581,
+    "dominant": "Industry Connection",
+    "date": "2025-03-22"
+  },
+  {
+    "id": "guide-on-the-side",
+    "title": "The Guide on the Side: Coaching STEM Students in Problem-Solving",
+    "category": "Teaching Strategies",
+    "entropy": 0.7655,
+    "dominant": "Faculty Development",
+    "date": "2025-03-29"
+  },
+  {
+    "id": "working-with-assistant-instructors",
+    "title": "Best Practices for Working with Assistant Instructors",
+    "category": "Teaching Strategies",
+    "entropy": 0.5787,
+    "dominant": "Faculty Development",
+    "date": "2025-04-05"
+  },
+  {
+    "id": "what-are-you-assessing",
+    "title": "Teaching Tip: What Are You Really Trying to Assess?",
+    "category": "Assessment & Feedback",
+    "entropy": 0.7576,
+    "dominant": "Assessment Design",
+    "date": "2025-04-12"
+  },
+  {
+    "id": "name-the-thinking",
+    "title": "Name the Thinking (Cognitive Skill), Not Just the Task",
+    "category": "Teaching Strategies",
+    "entropy": 0.5562,
+    "dominant": "Assessment Design",
+    "date": "2025-04-19"
+  },
+  {
+    "id": "pedagogical-tips-semester-start",
+    "title": "Pedagogical Tips for the Start of the Semester",
+    "category": "Teaching Strategies",
+    "entropy": 0.8331,
+    "dominant": "Course Setup",
+    "date": "2025-04-26"
+  },
+  {
+    "id": "digital-accessibility-title-ii",
+    "title": "Digital Accessibility and Title II: What Tech Faculty Need to Know",
+    "category": "Inclusion & Accessibility",
+    "entropy": 0.5506,
+    "dominant": "Equity Inclusion",
+    "date": "2025-05-03"
+  },
+  {
+    "id": "supporting-non-majors",
+    "title": "Supporting Non-Majors in Introductory Computer Courses",
+    "category": "Teaching Strategies",
+    "entropy": 0.6415,
+    "dominant": "Evidence Based",
+    "date": "2025-05-10"
+  },
+  {
+    "id": "what-are-you-really-assessing",
+    "title": "Teaching Tip: What Are You Really Trying to Assess?",
+    "category": "Assessment & Feedback",
+    "entropy": 0.6665,
+    "dominant": "Assessment Design",
+    "date": "2025-05-15"
+  },
+  {
+    "id": "map-makes-you-smarter",
+    "title": "A Map Makes You Smarter, GPS Does Not: AI, Work, and What Comes Next",
+    "category": "AI & Technology",
+    "entropy": 0.6816,
+    "dominant": "Industry Connection",
+    "date": "2025-05-17"
+  },
+  {
+    "id": "name-the-thinking-batch3",
+    "title": "Name the Thinking (Cognitive Skill), Not Just the Task",
+    "category": "Teaching Strategies",
+    "entropy": 0.5273,
+    "dominant": "Student Wellbeing",
+    "date": "2025-05-22"
+  },
+  {
+    "id": "posit-connect-video",
+    "title": "Posit Connect: Building Interactive R Applications for Teaching and Research",
+    "category": "AI & Technology",
+    "entropy": 0.2732,
+    "dominant": "Technology Tools",
+    "date": "2025-05-24"
+  },
+  {
+    "id": "pedagogical-tips-start-semester",
+    "title": "Pedagogical Tips for the Start of the Semester",
+    "category": "Course Design",
+    "entropy": 0.8116,
+    "dominant": "Course Setup",
+    "date": "2025-05-29"
+  },
+  {
+    "id": "bridging-the-gap-practitioners",
+    "title": "Bridging the Gap: What Tech Practitioners Really Want from CS Education",
+    "category": "Course Design",
+    "entropy": 0.679,
+    "dominant": "Industry Connection",
+    "date": "2025-05-31"
+  },
+  {
+    "id": "title-ii-digital-accessibility",
+    "title": "Title II Digital Accessibility and What It Means for Faculty",
+    "category": "Inclusion & Accessibility",
+    "entropy": 0.5005,
+    "dominant": "Equity Inclusion",
+    "date": "2025-06-05"
+  },
+  {
+    "id": "midsemester-feedback-illuminate",
+    "title": "Mid-Semester Feedback and Google Illuminate: AI Tools for Faculty",
+    "category": "AI & Technology",
+    "entropy": 0.5461,
+    "dominant": "Ai Tools",
+    "date": "2025-06-07"
+  },
+  {
+    "id": "supporting-non-majors-batch3",
+    "title": "Supporting Non-Majors in Introductory Computer Courses",
+    "category": "Student Engagement",
+    "entropy": 0.6486,
+    "dominant": "Scaffolding",
+    "date": "2025-06-12"
+  },
+  {
+    "id": "map-makes-you-smarter-batch3",
+    "title": "A Map Makes You Smarter, GPS Does Not: AI, Work, and What Comes Next",
+    "category": "AI & Technology",
+    "entropy": 0.8731,
+    "dominant": "Industry Connection",
+    "date": "2025-06-19"
+  },
+  {
+    "id": "posit-connect-shiny",
+    "title": "Posit Connect and Shiny for Teaching and Research",
+    "category": "AI & Technology",
+    "entropy": 0.1625,
+    "dominant": "Technology Tools",
+    "date": "2025-06-26"
+  },
+  {
+    "id": "bridging-gap-practitioners",
+    "title": "Bridging the Gap: What Tech Practitioners Really Want from CS Education",
+    "category": "Course Design",
+    "entropy": 0.3425,
+    "dominant": "Industry Connection",
+    "date": "2025-07-03"
+  },
+  {
+    "id": "midsemester-feedback-illuminate-batch3",
+    "title": "Mid-Semester Feedback and Google Illuminate for Faculty",
+    "category": "Assessment & Feedback",
+    "entropy": 0.5846,
+    "dominant": "Technology Tools",
+    "date": "2025-07-10"
+  },
+  {
+    "id": "classroom-assessment-techniques",
+    "title": "Classroom Assessment Techniques: Formative Feedback Tools",
+    "category": "Assessment & Feedback",
+    "entropy": 0.7271,
+    "dominant": "Communication",
+    "date": "2025-07-17"
+  },
+  {
+    "id": "instructor-talk",
+    "title": "Instructor Talk: The Power of Non-Content Language in the Classroom",
+    "category": "Teaching Strategies",
+    "entropy": 0.7993,
+    "dominant": "Communication",
+    "date": "2025-07-24"
+  },
+  {
+    "id": "wise-feedback",
+    "title": "Quick Tip: Wise Feedback",
+    "category": "Assessment & Feedback",
+    "entropy": 0.5749,
+    "dominant": "Feedback Practices",
+    "date": "2025-07-31"
+  },
+  {
+    "id": "playposit-evidence-based",
+    "title": "Evidence-Based Research Supporting the Use of PlayPosit in Classes",
+    "category": "AI & Technology",
+    "entropy": 0.5566,
+    "dominant": "Technology Tools",
+    "date": "2025-08-01"
+  },
+  {
+    "id": "metacognitive-engagement-strategies",
+    "title": "Integrating Metacognitive and Student Engagement Strategies into Your Practice",
+    "category": "Student Engagement",
+    "entropy": 0.6673,
+    "dominant": "Metacognition",
+    "date": "2025-08-07"
+  },
+  {
+    "id": "creating-inclusive-materials",
+    "title": "Creating Inclusive Course Materials",
+    "category": "Inclusion & Accessibility",
+    "entropy": 0.5662,
+    "dominant": "Equity Inclusion",
+    "date": "2025-08-08"
+  },
+  {
+    "id": "decoding-student-learning",
+    "title": "Teaching and Learning Conversation: Decoding the Disciplines with David Pace",
+    "category": "Teaching Strategies",
+    "entropy": 0.6893,
+    "dominant": "Evidence Based",
+    "date": "2025-08-14"
+  },
+  {
+    "id": "student-engagement-roster",
+    "title": "Student Engagement Roster (SER) Reminder",
+    "category": "Student Engagement",
+    "entropy": 0.4615,
+    "dominant": "Student Motivation",
+    "date": "2025-08-15"
+  },
+  {
+    "id": "midsemester-feedback-questions",
+    "title": "Sample Questions for Anonymous and Mid-Semester Feedback Surveys",
+    "category": "Assessment & Feedback",
+    "entropy": 0.7426,
+    "dominant": "Assessment Design",
+    "date": "2025-08-21"
+  },
+  {
+    "id": "understand-your-learners",
+    "title": "What Does It Mean to Understand Your Learners?",
+    "category": "Student Engagement",
+    "entropy": 0.8148,
+    "dominant": "Student Motivation",
+    "date": "2025-08-22"
+  },
+  {
+    "id": "ai-syllabus-policy-statements",
+    "title": "Resources for AI Syllabus Policy Statements",
+    "category": "AI & Technology",
+    "entropy": 0.5788,
+    "dominant": "Ai Tools",
+    "date": "2025-08-29"
+  },
+  {
+    "id": "liquid-syllabus",
+    "title": "The Liquid Syllabus: A Humanizing First Impression",
+    "category": "Course Design",
+    "entropy": 0.6631,
+    "dominant": "Communication",
+    "date": "2025-09-05"
+  },
+  {
+    "id": "canvas-start-semester-checklist",
+    "title": "Updating Canvas for the Start of the Semester",
+    "category": "AI & Technology",
+    "entropy": 0.636,
+    "dominant": "Equity Inclusion",
+    "date": "2025-09-12"
+  },
+  {
+    "id": "retrieval-practice",
+    "title": "Integrating Retrieval Practice into Classroom Instruction",
+    "category": "Teaching Strategies",
+    "entropy": 0.5758,
+    "dominant": "Assessment Design",
+    "date": "2025-09-19"
+  },
+  {
+    "id": "active-learning-cs",
+    "title": "Active Learning in Computer Science",
+    "category": "Teaching Strategies",
+    "entropy": 0.4209,
+    "dominant": "Active Learning",
+    "date": "2025-09-26"
+  },
+  {
+    "id": "trying-something-new",
+    "title": "Trying Something New in Your Course",
+    "category": "Teaching Strategies",
+    "entropy": 0.8408,
+    "dominant": "Evidence Based",
+    "date": "2025-10-03"
+  },
+  {
+    "id": "end-of-semester-tips",
+    "title": "End of the Semester Tips",
+    "category": "Faculty Wellbeing",
+    "entropy": 0.6575,
+    "dominant": "Industry Connection",
+    "date": "2025-10-10"
+  },
+  {
+    "id": "joy-centered-teaching",
+    "title": "Joy-Centered Teaching: Essential Reads for Faculty Book Clubs",
+    "category": "Faculty Wellbeing",
+    "entropy": 0.5282,
+    "dominant": "Student Wellbeing",
+    "date": "2025-10-15"
+  },
+  {
+    "id": "teach-ai-resource",
+    "title": "TeachAI: Resources for AI in Education",
+    "category": "AI & Technology",
+    "entropy": 0.7052,
+    "dominant": "Assessment Design",
+    "date": "2025-10-17"
+  },
+  {
+    "id": "curated-ai-resources-faculty",
+    "title": "A Curated Guide to AI Resources for Computing Faculty",
+    "category": "AI & Technology",
+    "entropy": 0.6044,
+    "dominant": "Ai Tools",
+    "date": "2025-10-22"
+  },
+  {
+    "id": "teaching-workload-planner",
+    "title": "Teaching Workload Planner",
+    "category": "Faculty Wellbeing",
+    "entropy": 0.6247,
+    "dominant": "Feedback Practices",
+    "date": "2025-10-24"
+  },
+  {
+    "id": "decoding-student-learning-batch5",
+    "title": "Decoding Student Learning: Finding and Fixing Bottlenecks",
+    "category": "Teaching Strategies",
+    "entropy": 0.7057,
+    "dominant": "Evidence Based",
+    "date": "2025-10-29"
+  },
+  {
+    "id": "interactive-lecturing",
+    "title": "Interactive Lecturing: Beyond the Traditional Lecture",
+    "category": "Teaching Strategies",
+    "entropy": 0.5896,
+    "dominant": "Technology Tools",
+    "date": "2025-10-31"
+  },
+  {
+    "id": "hidden-curriculum-higher-ed",
+    "title": "The Hidden Curriculum: What Students Don't Know They Don't Know",
+    "category": "Student Engagement",
+    "entropy": 0.7359,
+    "dominant": "Course Setup",
+    "date": "2025-11-05"
+  },
+  {
+    "id": "exam-debrief",
+    "title": "The Exam Debrief: Turning Assessments into Learning Opportunities",
+    "category": "Assessment & Feedback",
+    "entropy": 0.6755,
+    "dominant": "Evidence Based",
+    "date": "2025-11-07"
+  },
+  {
+    "id": "midsemester-feedback-questions-batch5",
+    "title": "Mid-Semester Feedback: Questions Beyond the Basics",
+    "category": "Assessment & Feedback",
+    "entropy": 0.6632,
+    "dominant": "Feedback Practices",
+    "date": "2025-11-12"
+  },
+  {
+    "id": "udl-3-guidelines",
+    "title": "Universal Design for Learning 3.0: What's New and Why It Matters",
+    "category": "Inclusion & Accessibility",
+    "entropy": 0.7272,
+    "dominant": "Equity Inclusion",
+    "date": "2025-11-19"
+  },
+  {
+    "id": "missed-exam-policy",
+    "title": "A No-Documentation Missed Exam Policy That Actually Works",
+    "category": "Course Design",
+    "entropy": 0.7443,
+    "dominant": "Assessment Design",
+    "date": "2025-11-26"
+  },
+  {
+    "id": "ai-teaching-podcasts",
+    "title": "AI Teaching and Learning Podcasts for Faculty",
+    "category": "AI & Technology",
+    "entropy": 0.7374,
+    "dominant": "Student Motivation",
+    "date": "2025-12-03"
+  },
+  {
+    "id": "voicethread-canvas",
+    "title": "Using VoiceThread in Canvas for Interactive Discussions",
+    "category": "AI & Technology",
+    "entropy": 0.6867,
+    "dominant": "Communication",
+    "date": "2025-12-10"
+  },
+  {
+    "id": "trauma-informed-pedagogy",
+    "title": "Trauma-Informed Pedagogy: Teaching With Care in Challenging Times",
+    "category": "Inclusion & Accessibility",
+    "entropy": 0.6549,
+    "dominant": "Student Wellbeing",
+    "date": "2025-12-17"
+  },
+  {
+    "id": "peer-instruction-computing",
+    "title": "Peer Instruction in Computing: Beyond Think-Pair-Share",
+    "category": "Teaching Strategies",
+    "entropy": 0.5325,
+    "dominant": "Active Learning",
+    "date": "2025-12-24"
+  },
+  {
+    "id": "chatgpt-faculty-guide",
+    "title": "Empower Your Work with AI: A Beginner's Guide to ChatGPT for Faculty",
+    "category": "AI & Technology",
+    "entropy": 0.5,
+    "dominant": "Ai Tools",
+    "date": "2025-12-31"
+  },
+  {
+    "id": "cut-paste-ai-prompts",
+    "title": "Cut and Paste AI Prompts for Teaching",
+    "category": "AI & Technology",
+    "entropy": 0.6999,
+    "dominant": "Ai Tools",
+    "date": "2026-01-15"
+  },
+  {
+    "id": "using-video-teaching",
+    "title": "Seven Ways to Use Video in Your Course",
+    "category": "Teaching Strategies",
+    "entropy": 0.5865,
+    "dominant": "Technology Tools",
+    "date": "2026-01-22"
+  },
+  {
+    "id": "building-student-relationships",
+    "title": "Building Relationships with Students: Practical Strategies",
+    "category": "Student Engagement",
+    "entropy": 0.6499,
+    "dominant": "Student Motivation",
+    "date": "2026-01-29"
+  },
+  {
+    "id": "end-semester-reflection",
+    "title": "The 6 Rs of Teaching Reflection",
+    "category": "Faculty Wellbeing",
+    "entropy": 0.6905,
+    "dominant": "Metacognition",
+    "date": "2026-02-05"
+  },
+  {
+    "id": "grade-review-policy",
+    "title": "Creating a Grade Review Policy That Works",
+    "category": "Assessment & Feedback",
+    "entropy": 0.5612,
+    "dominant": "Assessment Design",
+    "date": "2026-02-12"
+  },
+  {
+    "id": "backchanneling-classroom",
+    "title": "Using Backchannels to Enhance Classroom Discussion",
+    "category": "Teaching Strategies",
+    "entropy": 0.7227,
+    "dominant": "Communication",
+    "date": "2026-02-19"
+  },
+  {
+    "id": "educause-horizon-2023",
+    "title": "Key Trends from the EDUCAUSE 2023 Horizon Report",
+    "category": "AI & Technology",
+    "entropy": 0.7892,
+    "dominant": "Ai Tools",
+    "date": "2026-02-26"
+  },
+  {
+    "id": "course-questionnaire-tips",
+    "title": "Writing Effective Course Evaluation Questions",
+    "category": "Assessment & Feedback",
+    "entropy": 0.7294,
+    "dominant": "Feedback Practices",
+    "date": "2026-03-05"
+  },
+  {
+    "id": "open-educational-resources",
+    "title": "Open Educational Resources: Reducing Costs and Expanding Access",
+    "category": "Inclusion & Accessibility",
+    "entropy": 0.6316,
+    "dominant": "Technology Tools",
+    "date": "2026-03-12"
+  },
+  {
+    "id": "ta-checklist",
+    "title": "Working with Teaching Assistants: A Faculty Checklist",
+    "category": "Teaching Strategies",
+    "entropy": 0.7673,
+    "dominant": "Faculty Development",
+    "date": "2026-03-19"
+  },
+  {
+    "id": "hyflex-teaching",
+    "title": "HyFlex Teaching: Designing for Flexible Modalities",
+    "category": "Teaching Strategies",
+    "entropy": 0.6024,
+    "dominant": "Technology Tools",
+    "date": "2026-03-26"
+  },
+  {
+    "id": "microlectures-guide",
+    "title": "Creating Effective Microlectures",
+    "category": "Teaching Strategies",
+    "entropy": 0.6862,
+    "dominant": "Scaffolding",
+    "date": "2026-04-02"
+  }
+]

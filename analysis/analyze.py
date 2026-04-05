@@ -127,77 +127,143 @@ def run_pca(matrix, posts, themes):
 
 
 def compute_correlations(matrix, themes):
-    """Compute Pearson correlations between all theme pairs."""
+    """Compute correlations and generate network graph data."""
     n_themes = len(themes)
-    n_pairs = n_themes * (n_themes - 1) // 2
-    # Use FDR-like threshold instead of strict Bonferroni for small corpus
-    bonferroni_threshold = 0.05
+    theme_names = [t.replace("_", " ").title() for t in themes]
 
     corr_matrix = np.corrcoef(matrix.T)
-    result = {
-        "themes": [t.replace("_", " ").title() for t in themes],
-        "matrix": [],
-        "significant_pairs": [],
-    }
 
+    # Compute connection count per theme (how many significant links)
+    connections = {t: 0 for t in theme_names}
+
+    # Build edges (links) for network graph
+    links = []
+    alliances = []
+    rivalries = []
     for i in range(n_themes):
-        row = []
-        for j in range(n_themes):
+        for j in range(i + 1, n_themes):
             r = float(corr_matrix[i, j])
-            row.append(round(r, 3))
-            if i < j:
-                # Compute p-value
-                n = matrix.shape[0]
-                t_stat = r * math.sqrt((n - 2) / (1 - r**2 + 1e-10))
-                p_value = 2 * (1 - stats.t.cdf(abs(t_stat), n - 2))
-                if p_value < bonferroni_threshold and abs(r) > 0.15:
-                    result["significant_pairs"].append({
-                        "theme1": themes[i].replace("_", " ").title(),
-                        "theme2": themes[j].replace("_", " ").title(),
-                        "r": round(r, 3),
-                        "p": round(p_value, 6),
-                    })
-        result["matrix"].append(row)
+            n = matrix.shape[0]
+            t_stat = r * math.sqrt((n - 2) / (1 - r**2 + 1e-10))
+            p_value = 2 * (1 - stats.t.cdf(abs(t_stat), n - 2))
+            if abs(r) > 0.15:
+                link_type = "alliance" if r > 0 else "rivalry"
+                links.append({
+                    "source": theme_names[i],
+                    "target": theme_names[j],
+                    "r": round(r, 3),
+                    "type": link_type,
+                })
+                connections[theme_names[i]] += 1
+                connections[theme_names[j]] += 1
+                if link_type == "alliance":
+                    alliances.append({"pair": f"{theme_names[i]} & {theme_names[j]}", "r": round(r, 3)})
+                else:
+                    rivalries.append({"pair": f"{theme_names[i]} & {theme_names[j]}", "r": round(r, 3)})
 
-    # Sort significant pairs by absolute r
-    result["significant_pairs"].sort(key=lambda x: -abs(x["r"]))
+    alliances.sort(key=lambda x: -x["r"])
+    rivalries.sort(key=lambda x: x["r"])
+
+    # Build nodes
+    nodes = []
+    for i, name in enumerate(theme_names):
+        # Mean score across all posts for sizing
+        mean_score = float(matrix[:, i].mean())
+        nodes.append({
+            "id": name,
+            "connections": connections[name],
+            "meanScore": round(mean_score, 3),
+        })
+
+    n_alliances = len(alliances)
+    n_rivalries = len(rivalries)
+
+    result = {
+        "themes": theme_names,
+        "matrix": [[round(float(corr_matrix[i, j]), 3) for j in range(n_themes)] for i in range(n_themes)],
+        "nodes": nodes,
+        "links": links,
+        "alliances": alliances[:5],
+        "rivalries": rivalries[:5],
+        "summary": f"{len(links)} connections ({n_alliances} alliances, {n_rivalries} rivalries)",
+        "significant_pairs": alliances[:3] + rivalries[:3],
+    }
     return result
 
 
-def compute_novelty(z_scored, posts):
-    """Compute novelty score for each post."""
-    # Centroid distance
+def compute_novelty(z_scored, posts, matrix, themes):
+    """Compute novelty score for each post with theme breakdown."""
     centroid = z_scored.mean(axis=0)
     centroid_dists = np.sqrt(((z_scored - centroid) ** 2).sum(axis=1))
-
-    # Mean pairwise cosine distance
     cos_dist_matrix = cosine_distances(z_scored)
     mean_cos_dists = cos_dist_matrix.mean(axis=1)
 
-    # Normalize both to 0-1
     def normalize(arr):
         mn, mx = arr.min(), arr.max()
-        if mx == mn:
-            return np.zeros_like(arr)
-        return (arr - mn) / (mx - mn)
+        return np.zeros_like(arr) if mx == mn else (arr - mn) / (mx - mn)
 
-    centroid_norm = normalize(centroid_dists)
-    cosine_norm = normalize(mean_cos_dists)
+    novelty = (normalize(centroid_dists) + normalize(mean_cos_dists)) / 2
 
-    # Composite score
-    novelty = (centroid_norm + cosine_norm) / 2
+    # Sort by date for temporal ordering
+    dated = [(i, posts[i]) for i in range(len(posts)) if posts[i].get("date")]
+    dated.sort(key=lambda x: x[1]["date"])
 
     result = []
     for i, post in enumerate(posts):
+        # Get top themes for this post
+        scores = matrix[i]
+        sorted_idx = scores.argsort()[::-1]
+        top = [{"name": themes[j].replace("_", " ").title(), "score": round(float(scores[j]), 2)} for j in sorted_idx[:3] if scores[j] > 0]
+
+        result.append({
+            "id": post["id"],
+            "title": post["title"],
+            "summary": post["summary"],
+            "category": post["category"],
+            "novelty": round(float(novelty[i]), 4),
+            "date": post["date"],
+            "topThemes": top,
+        })
+
+    result.sort(key=lambda x: -x["novelty"])
+    return result
+
+
+def compute_entropy(matrix, posts, themes):
+    """Compute Shannon entropy for each post — measures thematic breadth."""
+    n_themes = len(themes)
+    max_entropy = math.log2(n_themes)
+
+    result = []
+    for i, post in enumerate(posts):
+        scores = matrix[i]
+        # Normalize to probability distribution
+        total = scores.sum()
+        if total == 0:
+            entropy = 0
+        else:
+            probs = scores / total
+            entropy = 0
+            for p in probs:
+                if p > 0:
+                    entropy -= p * math.log2(p)
+
+        # Normalize to 0-1
+        norm_entropy = entropy / max_entropy if max_entropy > 0 else 0
+
+        # Dominant theme
+        dominant_idx = scores.argmax()
+        dominant = themes[dominant_idx].replace("_", " ").title()
+
         result.append({
             "id": post["id"],
             "title": post["title"],
             "category": post["category"],
-            "novelty": round(float(novelty[i]), 4),
+            "entropy": round(float(norm_entropy), 4),
+            "dominant": dominant,
             "date": post["date"],
         })
 
-    result.sort(key=lambda x: -x["novelty"])
     return result
 
 
@@ -294,12 +360,19 @@ def main():
     print("  Saved correlations.json")
 
     print("Computing novelty...")
-    novelty_result = compute_novelty(z_scored, posts)
+    novelty_result = compute_novelty(z_scored, posts, matrix, themes)
     with open(os.path.join(DATA_DIR, "novelty.json"), "w") as f:
         json.dump(novelty_result, f, indent=2)
     print(f"  Most novel: {novelty_result[0]['title'][:50]}...")
-    print(f"  Most typical: {novelty_result[-1]['title'][:50]}...")
     print("  Saved novelty.json")
+
+    print("Computing entropy...")
+    entropy_result = compute_entropy(matrix, posts, themes)
+    with open(os.path.join(DATA_DIR, "entropy.json"), "w") as f:
+        json.dump(entropy_result, f, indent=2)
+    avg_entropy = sum(e["entropy"] for e in entropy_result) / len(entropy_result)
+    print(f"  Mean entropy: {avg_entropy:.3f}")
+    print("  Saved entropy.json")
 
     print("Generating streamgraph data...")
     stream_result = generate_streamgraph(posts)

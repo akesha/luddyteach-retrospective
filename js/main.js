@@ -31,6 +31,9 @@ const observer = new IntersectionObserver(
         case "correlations":
           renderCorrelations();
           break;
+        case "diversity":
+          renderEntropy();
+          break;
         case "novelty":
           renderNovelty();
           break;

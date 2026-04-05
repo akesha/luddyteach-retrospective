@@ -273,24 +273,238 @@
       1.0
     ]
   ],
+  "nodes": [
+    {
+      "id": "Ai Tools",
+      "connections": 2,
+      "meanScore": 1.036
+    },
+    {
+      "id": "Active Learning",
+      "connections": 0,
+      "meanScore": 0.556
+    },
+    {
+      "id": "Assessment Design",
+      "connections": 3,
+      "meanScore": 1.529
+    },
+    {
+      "id": "Metacognition",
+      "connections": 1,
+      "meanScore": 0.437
+    },
+    {
+      "id": "Equity Inclusion",
+      "connections": 0,
+      "meanScore": 1.292
+    },
+    {
+      "id": "Student Motivation",
+      "connections": 2,
+      "meanScore": 0.897
+    },
+    {
+      "id": "Feedback Practices",
+      "connections": 2,
+      "meanScore": 0.939
+    },
+    {
+      "id": "Course Setup",
+      "connections": 3,
+      "meanScore": 0.828
+    },
+    {
+      "id": "Technology Tools",
+      "connections": 3,
+      "meanScore": 2.261
+    },
+    {
+      "id": "Faculty Development",
+      "connections": 1,
+      "meanScore": 1.045
+    },
+    {
+      "id": "Scaffolding",
+      "connections": 4,
+      "meanScore": 0.767
+    },
+    {
+      "id": "Student Wellbeing",
+      "connections": 1,
+      "meanScore": 0.733
+    },
+    {
+      "id": "Industry Connection",
+      "connections": 2,
+      "meanScore": 0.932
+    },
+    {
+      "id": "Communication",
+      "connections": 1,
+      "meanScore": 1.033
+    },
+    {
+      "id": "Evidence Based",
+      "connections": 3,
+      "meanScore": 0.922
+    }
+  ],
+  "links": [
+    {
+      "source": "Ai Tools",
+      "target": "Feedback Practices",
+      "r": -0.158,
+      "type": "rivalry"
+    },
+    {
+      "source": "Ai Tools",
+      "target": "Course Setup",
+      "r": 0.161,
+      "type": "alliance"
+    },
+    {
+      "source": "Assessment Design",
+      "target": "Student Motivation",
+      "r": -0.158,
+      "type": "rivalry"
+    },
+    {
+      "source": "Assessment Design",
+      "target": "Feedback Practices",
+      "r": 0.311,
+      "type": "alliance"
+    },
+    {
+      "source": "Assessment Design",
+      "target": "Evidence Based",
+      "r": 0.191,
+      "type": "alliance"
+    },
+    {
+      "source": "Metacognition",
+      "target": "Technology Tools",
+      "r": -0.198,
+      "type": "rivalry"
+    },
+    {
+      "source": "Student Motivation",
+      "target": "Scaffolding",
+      "r": 0.152,
+      "type": "alliance"
+    },
+    {
+      "source": "Course Setup",
+      "target": "Technology Tools",
+      "r": 0.195,
+      "type": "alliance"
+    },
+    {
+      "source": "Course Setup",
+      "target": "Scaffolding",
+      "r": -0.157,
+      "type": "rivalry"
+    },
+    {
+      "source": "Technology Tools",
+      "target": "Student Wellbeing",
+      "r": -0.154,
+      "type": "rivalry"
+    },
+    {
+      "source": "Faculty Development",
+      "target": "Industry Connection",
+      "r": 0.177,
+      "type": "alliance"
+    },
+    {
+      "source": "Scaffolding",
+      "target": "Industry Connection",
+      "r": -0.199,
+      "type": "rivalry"
+    },
+    {
+      "source": "Scaffolding",
+      "target": "Evidence Based",
+      "r": 0.252,
+      "type": "alliance"
+    },
+    {
+      "source": "Communication",
+      "target": "Evidence Based",
+      "r": -0.265,
+      "type": "rivalry"
+    }
+  ],
+  "alliances": [
+    {
+      "pair": "Assessment Design & Feedback Practices",
+      "r": 0.311
+    },
+    {
+      "pair": "Scaffolding & Evidence Based",
+      "r": 0.252
+    },
+    {
+      "pair": "Course Setup & Technology Tools",
+      "r": 0.195
+    },
+    {
+      "pair": "Assessment Design & Evidence Based",
+      "r": 0.191
+    },
+    {
+      "pair": "Faculty Development & Industry Connection",
+      "r": 0.177
+    }
+  ],
+  "rivalries": [
+    {
+      "pair": "Communication & Evidence Based",
+      "r": -0.265
+    },
+    {
+      "pair": "Scaffolding & Industry Connection",
+      "r": -0.199
+    },
+    {
+      "pair": "Metacognition & Technology Tools",
+      "r": -0.198
+    },
+    {
+      "pair": "Ai Tools & Feedback Practices",
+      "r": -0.158
+    },
+    {
+      "pair": "Assessment Design & Student Motivation",
+      "r": -0.158
+    }
+  ],
+  "summary": "14 connections (7 alliances, 7 rivalries)",
   "significant_pairs": [
     {
-      "theme1": "Assessment Design",
-      "theme2": "Feedback Practices",
-      "r": 0.311,
-      "p": 0.005933
+      "pair": "Assessment Design & Feedback Practices",
+      "r": 0.311
     },
     {
-      "theme1": "Communication",
-      "theme2": "Evidence Based",
-      "r": -0.265,
-      "p": 0.019823
+      "pair": "Scaffolding & Evidence Based",
+      "r": 0.252
     },
     {
-      "theme1": "Scaffolding",
-      "theme2": "Evidence Based",
-      "r": 0.252,
-      "p": 0.02688
+      "pair": "Course Setup & Technology Tools",
+      "r": 0.195
+    },
+    {
+      "pair": "Communication & Evidence Based",
+      "r": -0.265
+    },
+    {
+      "pair": "Scaffolding & Industry Connection",
+      "r": -0.199
+    },
+    {
+      "pair": "Metacognition & Technology Tools",
+      "r": -0.198
     }
   ]
 }
