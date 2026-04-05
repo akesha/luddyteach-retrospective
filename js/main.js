@@ -22,6 +22,9 @@ const observer = new IntersectionObserver(
         case "themes":
           renderThemeChart();
           break;
+        case "vocabulary":
+          renderVocabulary();
+          break;
         case "streams":
           renderStreamgraph();
           break;

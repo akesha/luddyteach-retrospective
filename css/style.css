@@ -289,6 +289,53 @@ svg text {
   background: #f5f5f5;
 }
 
+/* Vocabulary / Theme clusters */
+.cluster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.cluster-card {
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+.cluster-card-header {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+.cluster-card-desc {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.cluster-theme-tag {
+  display: inline-block;
+  font-size: 11px;
+  background: #f5f5f5;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin: 2px 2px;
+  color: #555;
+}
+.vocab-legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.vocab-legend-item {
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 /* Network graph & novelty wrappers */
 .corr-wrapper, .novelty-wrapper {
   display: flex;
