@@ -1,0 +1,93 @@
+{
+  "categories": [
+    "AI & Technology",
+    "Assessment & Feedback",
+    "Course Design",
+    "Faculty Wellbeing",
+    "Inclusion & Accessibility",
+    "Student Engagement",
+    "Teaching Strategies"
+  ],
+  "data": [
+    {
+      "period": "2025 Jan-Feb",
+      "AI & Technology": 2,
+      "Assessment & Feedback": 1,
+      "Course Design": 1,
+      "Faculty Wellbeing": 1,
+      "Inclusion & Accessibility": 0,
+      "Student Engagement": 0,
+      "Teaching Strategies": 3
+    },
+    {
+      "period": "2025 Jul-Aug",
+      "AI & Technology": 2,
+      "Assessment & Feedback": 4,
+      "Course Design": 1,
+      "Faculty Wellbeing": 0,
+      "Inclusion & Accessibility": 1,
+      "Student Engagement": 3,
+      "Teaching Strategies": 2
+    },
+    {
+      "period": "2025 Mar-Apr",
+      "AI & Technology": 1,
+      "Assessment & Feedback": 1,
+      "Course Design": 1,
+      "Faculty Wellbeing": 0,
+      "Inclusion & Accessibility": 0,
+      "Student Engagement": 2,
+      "Teaching Strategies": 4
+    },
+    {
+      "period": "2025 May-Jun",
+      "AI & Technology": 5,
+      "Assessment & Feedback": 1,
+      "Course Design": 2,
+      "Faculty Wellbeing": 0,
+      "Inclusion & Accessibility": 2,
+      "Student Engagement": 1,
+      "Teaching Strategies": 2
+    },
+    {
+      "period": "2025 Nov-Dec",
+      "AI & Technology": 3,
+      "Assessment & Feedback": 2,
+      "Course Design": 1,
+      "Faculty Wellbeing": 0,
+      "Inclusion & Accessibility": 2,
+      "Student Engagement": 1,
+      "Teaching Strategies": 1
+    },
+    {
+      "period": "2025 Sep-Oct",
+      "AI & Technology": 3,
+      "Assessment & Feedback": 0,
+      "Course Design": 1,
+      "Faculty Wellbeing": 3,
+      "Inclusion & Accessibility": 0,
+      "Student Engagement": 0,
+      "Teaching Strategies": 5
+    },
+    {
+      "period": "2026 Jan-Feb",
+      "AI & Technology": 2,
+      "Assessment & Feedback": 1,
+      "Course Design": 0,
+      "Faculty Wellbeing": 1,
+      "Inclusion & Accessibility": 0,
+      "Student Engagement": 1,
+      "Teaching Strategies": 2
+    },
+    {
+      "period": "2026 Mar-Apr",
+      "AI & Technology": 0,
+      "Assessment & Feedback": 1,
+      "Course Design": 0,
+      "Faculty Wellbeing": 0,
+      "Inclusion & Accessibility": 1,
+      "Student Engagement": 0,
+      "Teaching Strategies": 3
+    }
+  ]
+}

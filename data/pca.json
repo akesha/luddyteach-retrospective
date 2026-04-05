@@ -1,0 +1,626 @@
+{
+  "explained_variance": [
+    11.9,
+    10.5
+  ],
+  "pc1_label": "Evidence Based / Feedback Practices / Course Setup",
+  "pc2_label": "Student Motivation / Scaffolding / Assessment Design",
+  "points": [
+    {
+      "id": "finks-taxonomy",
+      "title": "Beyond Bloom's: How Fink's Taxonomy Transforms CS Course Design",
+      "category": "Course Design",
+      "x": 0.5575,
+      "y": -0.4924,
+      "date": "2025-01-10"
+    },
+    {
+      "id": "feedback-strategies",
+      "title": "Four Strategies for High-Impact Feedback Without Burning Out",
+      "category": "Assessment & Feedback",
+      "x": 3.3579,
+      "y": -2.8223,
+      "date": "2025-01-17"
+    },
+    {
+      "id": "industry-relevance",
+      "title": "Making Your Course Matter: Three Strategies for Industry Relevance",
+      "category": "Teaching Strategies",
+      "x": -0.5994,
+      "y": 0.8889,
+      "date": "2025-01-24"
+    },
+    {
+      "id": "canvas-ai-pages",
+      "title": "Stop Fighting the Editor: Beautiful Canvas Pages in Seconds with AI",
+      "category": "AI & Technology",
+      "x": -4.968,
+      "y": -1.2187,
+      "date": "2025-01-31"
+    },
+    {
+      "id": "flipped-classroom",
+      "title": "The Flipped Tech Classroom: From Passive Lectures to Active Learning",
+      "category": "Teaching Strategies",
+      "x": 0.6389,
+      "y": 1.1844,
+      "date": "2025-02-07"
+    },
+    {
+      "id": "week-one-tech-setup",
+      "title": "Week 1: Setting the Tech Tone for Your Course",
+      "category": "Teaching Strategies",
+      "x": -0.909,
+      "y": 0.1798,
+      "date": "2025-02-14"
+    },
+    {
+      "id": "joyful-teaching",
+      "title": "Books for Joyful Teaching: A Curated Reading List for Faculty",
+      "category": "Faculty Wellbeing",
+      "x": -0.3155,
+      "y": 0.3337,
+      "date": "2025-02-21"
+    },
+    {
+      "id": "ai-resources-guide",
+      "title": "A Curated Guide to AI Resources for CS Faculty",
+      "category": "AI & Technology",
+      "x": -0.5983,
+      "y": -0.7574,
+      "date": "2025-02-28"
+    },
+    {
+      "id": "teaching-for-integrity-ai",
+      "title": "Teaching for Integrity in the Age of AI: From Compliance to Culture",
+      "category": "AI & Technology",
+      "x": -0.5897,
+      "y": -0.9566,
+      "date": "2025-03-01"
+    },
+    {
+      "id": "improve-attendance",
+      "title": "Possible Ways to Improve Attendance and Clarification on Last Week's Post",
+      "category": "Student Engagement",
+      "x": 0.4626,
+      "y": 2.6627,
+      "date": "2025-03-08"
+    },
+    {
+      "id": "navigating-attendance-challenges",
+      "title": "Navigating Attendance Challenges in the Modern Classroom: Practical Tips for Faculty",
+      "category": "Student Engagement",
+      "x": 0.1187,
+      "y": 1.2265,
+      "date": "2025-03-15"
+    },
+    {
+      "id": "academia-industry-partnerships",
+      "title": "Building a Framework for Academia-Industry Partnerships and AI Teaching Podcasts",
+      "category": "Course Design",
+      "x": 0.5879,
+      "y": 1.1526,
+      "date": "2025-03-22"
+    },
+    {
+      "id": "guide-on-the-side",
+      "title": "The Guide on the Side: Coaching STEM Students in Problem-Solving",
+      "category": "Teaching Strategies",
+      "x": 0.4213,
+      "y": -0.0746,
+      "date": "2025-03-29"
+    },
+    {
+      "id": "working-with-assistant-instructors",
+      "title": "Best Practices for Working with Assistant Instructors",
+      "category": "Teaching Strategies",
+      "x": 0.1379,
+      "y": -3.5324,
+      "date": "2025-04-05"
+    },
+    {
+      "id": "what-are-you-assessing",
+      "title": "Teaching Tip: What Are You Really Trying to Assess?",
+      "category": "Assessment & Feedback",
+      "x": 0.7952,
+      "y": -0.8532,
+      "date": "2025-04-12"
+    },
+    {
+      "id": "name-the-thinking",
+      "title": "Name the Thinking (Cognitive Skill), Not Just the Task",
+      "category": "Teaching Strategies",
+      "x": 0.5787,
+      "y": -0.4724,
+      "date": "2025-04-19"
+    },
+    {
+      "id": "pedagogical-tips-semester-start",
+      "title": "Pedagogical Tips for the Start of the Semester",
+      "category": "Teaching Strategies",
+      "x": 0.1226,
+      "y": 0.9087,
+      "date": "2025-04-26"
+    },
+    {
+      "id": "digital-accessibility-title-ii",
+      "title": "Digital Accessibility and Title II: What Tech Faculty Need to Know",
+      "category": "Inclusion & Accessibility",
+      "x": -2.4265,
+      "y": 0.8418,
+      "date": "2025-05-03"
+    },
+    {
+      "id": "supporting-non-majors",
+      "title": "Supporting Non-Majors in Introductory Computer Courses",
+      "category": "Teaching Strategies",
+      "x": 1.6395,
+      "y": 0.5374,
+      "date": "2025-05-10"
+    },
+    {
+      "id": "what-are-you-really-assessing",
+      "title": "Teaching Tip: What Are You Really Trying to Assess?",
+      "category": "Assessment & Feedback",
+      "x": 1.6975,
+      "y": -1.9634,
+      "date": "2025-05-15"
+    },
+    {
+      "id": "map-makes-you-smarter",
+      "title": "A Map Makes You Smarter, GPS Does Not: AI, Work, and What Comes Next",
+      "category": "AI & Technology",
+      "x": -0.7218,
+      "y": -0.7214,
+      "date": "2025-05-17"
+    },
+    {
+      "id": "name-the-thinking-batch3",
+      "title": "Name the Thinking (Cognitive Skill), Not Just the Task",
+      "category": "Teaching Strategies",
+      "x": 0.5113,
+      "y": -0.3876,
+      "date": "2025-05-22"
+    },
+    {
+      "id": "posit-connect-video",
+      "title": "Posit Connect: Building Interactive R Applications for Teaching and Research",
+      "category": "AI & Technology",
+      "x": -1.369,
+      "y": 0.4379,
+      "date": "2025-05-24"
+    },
+    {
+      "id": "pedagogical-tips-start-semester",
+      "title": "Pedagogical Tips for the Start of the Semester",
+      "category": "Course Design",
+      "x": 0.0071,
+      "y": 0.8705,
+      "date": "2025-05-29"
+    },
+    {
+      "id": "bridging-the-gap-practitioners",
+      "title": "Bridging the Gap: What Tech Practitioners Really Want from CS Education",
+      "category": "Course Design",
+      "x": -0.2656,
+      "y": -0.3581,
+      "date": "2025-05-31"
+    },
+    {
+      "id": "title-ii-digital-accessibility",
+      "title": "Title II Digital Accessibility and What It Means for Faculty",
+      "category": "Inclusion & Accessibility",
+      "x": -2.54,
+      "y": 0.6358,
+      "date": "2025-06-05"
+    },
+    {
+      "id": "midsemester-feedback-illuminate",
+      "title": "Mid-Semester Feedback and Google Illuminate: AI Tools for Faculty",
+      "category": "AI & Technology",
+      "x": -1.3238,
+      "y": -1.1542,
+      "date": "2025-06-07"
+    },
+    {
+      "id": "supporting-non-majors-batch3",
+      "title": "Supporting Non-Majors in Introductory Computer Courses",
+      "category": "Student Engagement",
+      "x": 2.1571,
+      "y": 3.0045,
+      "date": "2025-06-12"
+    },
+    {
+      "id": "map-makes-you-smarter-batch3",
+      "title": "A Map Makes You Smarter, GPS Does Not: AI, Work, and What Comes Next",
+      "category": "AI & Technology",
+      "x": -0.2653,
+      "y": -0.8869,
+      "date": "2025-06-19"
+    },
+    {
+      "id": "posit-connect-shiny",
+      "title": "Posit Connect and Shiny for Teaching and Research",
+      "category": "AI & Technology",
+      "x": -1.6453,
+      "y": 0.4933,
+      "date": "2025-06-26"
+    },
+    {
+      "id": "bridging-gap-practitioners",
+      "title": "Bridging the Gap: What Tech Practitioners Really Want from CS Education",
+      "category": "Course Design",
+      "x": -0.3746,
+      "y": -0.3688,
+      "date": "2025-07-03"
+    },
+    {
+      "id": "midsemester-feedback-illuminate-batch3",
+      "title": "Mid-Semester Feedback and Google Illuminate for Faculty",
+      "category": "Assessment & Feedback",
+      "x": 0.8192,
+      "y": -0.4095,
+      "date": "2025-07-10"
+    },
+    {
+      "id": "classroom-assessment-techniques",
+      "title": "Classroom Assessment Techniques: Formative Feedback Tools",
+      "category": "Assessment & Feedback",
+      "x": 0.5577,
+      "y": -0.9017,
+      "date": "2025-07-17"
+    },
+    {
+      "id": "instructor-talk",
+      "title": "Instructor Talk: The Power of Non-Content Language in the Classroom",
+      "category": "Teaching Strategies",
+      "x": -0.0637,
+      "y": -0.4479,
+      "date": "2025-07-24"
+    },
+    {
+      "id": "wise-feedback",
+      "title": "Quick Tip: Wise Feedback",
+      "category": "Assessment & Feedback",
+      "x": 1.0832,
+      "y": -1.0444,
+      "date": "2025-07-31"
+    },
+    {
+      "id": "playposit-evidence-based",
+      "title": "Evidence-Based Research Supporting the Use of PlayPosit in Classes",
+      "category": "AI & Technology",
+      "x": 0.3646,
+      "y": -0.6023,
+      "date": "2025-08-01"
+    },
+    {
+      "id": "metacognitive-engagement-strategies",
+      "title": "Integrating Metacognitive and Student Engagement Strategies into Your Practice",
+      "category": "Student Engagement",
+      "x": 3.4152,
+      "y": -0.1716,
+      "date": "2025-08-07"
+    },
+    {
+      "id": "creating-inclusive-materials",
+      "title": "Creating Inclusive Course Materials",
+      "category": "Inclusion & Accessibility",
+      "x": -1.7089,
+      "y": 1.2284,
+      "date": "2025-08-08"
+    },
+    {
+      "id": "decoding-student-learning",
+      "title": "Teaching and Learning Conversation: Decoding the Disciplines with David Pace",
+      "category": "Teaching Strategies",
+      "x": 1.0526,
+      "y": 1.881,
+      "date": "2025-08-14"
+    },
+    {
+      "id": "student-engagement-roster",
+      "title": "Student Engagement Roster (SER) Reminder",
+      "category": "Student Engagement",
+      "x": 0.4219,
+      "y": 1.7581,
+      "date": "2025-08-15"
+    },
+    {
+      "id": "midsemester-feedback-questions",
+      "title": "Sample Questions for Anonymous and Mid-Semester Feedback Surveys",
+      "category": "Assessment & Feedback",
+      "x": 0.2414,
+      "y": -0.8713,
+      "date": "2025-08-21"
+    },
+    {
+      "id": "understand-your-learners",
+      "title": "What Does It Mean to Understand Your Learners?",
+      "category": "Student Engagement",
+      "x": 0.4202,
+      "y": 1.8203,
+      "date": "2025-08-22"
+    },
+    {
+      "id": "ai-syllabus-policy-statements",
+      "title": "Resources for AI Syllabus Policy Statements",
+      "category": "AI & Technology",
+      "x": -1.3258,
+      "y": -0.2303,
+      "date": "2025-08-29"
+    },
+    {
+      "id": "liquid-syllabus",
+      "title": "The Liquid Syllabus: A Humanizing First Impression",
+      "category": "Course Design",
+      "x": -1.5629,
+      "y": -0.6065,
+      "date": "2025-09-05"
+    },
+    {
+      "id": "canvas-start-semester-checklist",
+      "title": "Updating Canvas for the Start of the Semester",
+      "category": "AI & Technology",
+      "x": -0.4992,
+      "y": 0.0378,
+      "date": "2025-09-12"
+    },
+    {
+      "id": "retrieval-practice",
+      "title": "Integrating Retrieval Practice into Classroom Instruction",
+      "category": "Teaching Strategies",
+      "x": 0.5788,
+      "y": -0.3814,
+      "date": "2025-09-19"
+    },
+    {
+      "id": "active-learning-cs",
+      "title": "Active Learning in Computer Science",
+      "category": "Teaching Strategies",
+      "x": 0.4711,
+      "y": 1.5389,
+      "date": "2025-09-26"
+    },
+    {
+      "id": "trying-something-new",
+      "title": "Trying Something New in Your Course",
+      "category": "Teaching Strategies",
+      "x": 1.4298,
+      "y": 2.0452,
+      "date": "2025-10-03"
+    },
+    {
+      "id": "end-of-semester-tips",
+      "title": "End of the Semester Tips",
+      "category": "Faculty Wellbeing",
+      "x": 1.6082,
+      "y": -0.4947,
+      "date": "2025-10-10"
+    },
+    {
+      "id": "joy-centered-teaching",
+      "title": "Joy-Centered Teaching: Essential Reads for Faculty Book Clubs",
+      "category": "Faculty Wellbeing",
+      "x": -0.4622,
+      "y": -0.0339,
+      "date": "2025-10-15"
+    },
+    {
+      "id": "teach-ai-resource",
+      "title": "TeachAI: Resources for AI in Education",
+      "category": "AI & Technology",
+      "x": -0.2297,
+      "y": -0.7095,
+      "date": "2025-10-17"
+    },
+    {
+      "id": "curated-ai-resources-faculty",
+      "title": "A Curated Guide to AI Resources for Computing Faculty",
+      "category": "AI & Technology",
+      "x": -0.8291,
+      "y": -1.0905,
+      "date": "2025-10-22"
+    },
+    {
+      "id": "teaching-workload-planner",
+      "title": "Teaching Workload Planner",
+      "category": "Faculty Wellbeing",
+      "x": 0.5983,
+      "y": -1.6298,
+      "date": "2025-10-24"
+    },
+    {
+      "id": "decoding-student-learning-batch5",
+      "title": "Decoding Student Learning: Finding and Fixing Bottlenecks",
+      "category": "Teaching Strategies",
+      "x": 0.2256,
+      "y": 0.1401,
+      "date": "2025-10-29"
+    },
+    {
+      "id": "interactive-lecturing",
+      "title": "Interactive Lecturing: Beyond the Traditional Lecture",
+      "category": "Teaching Strategies",
+      "x": -0.0057,
+      "y": 1.5928,
+      "date": "2025-10-31"
+    },
+    {
+      "id": "hidden-curriculum-higher-ed",
+      "title": "The Hidden Curriculum: What Students Don't Know They Don't Know",
+      "category": "Student Engagement",
+      "x": -0.2993,
+      "y": 0.3117,
+      "date": "2025-11-05"
+    },
+    {
+      "id": "exam-debrief",
+      "title": "The Exam Debrief: Turning Assessments into Learning Opportunities",
+      "category": "Assessment & Feedback",
+      "x": 3.9959,
+      "y": -0.3397,
+      "date": "2025-11-07"
+    },
+    {
+      "id": "midsemester-feedback-questions-batch5",
+      "title": "Mid-Semester Feedback: Questions Beyond the Basics",
+      "category": "Assessment & Feedback",
+      "x": 0.3095,
+      "y": -0.7221,
+      "date": "2025-11-12"
+    },
+    {
+      "id": "udl-3-guidelines",
+      "title": "Universal Design for Learning 3.0: What's New and Why It Matters",
+      "category": "Inclusion & Accessibility",
+      "x": -0.3792,
+      "y": 3.5973,
+      "date": "2025-11-19"
+    },
+    {
+      "id": "missed-exam-policy",
+      "title": "A No-Documentation Missed Exam Policy That Actually Works",
+      "category": "Course Design",
+      "x": 0.3772,
+      "y": -0.9322,
+      "date": "2025-11-26"
+    },
+    {
+      "id": "ai-teaching-podcasts",
+      "title": "AI Teaching and Learning Podcasts for Faculty",
+      "category": "AI & Technology",
+      "x": -0.3114,
+      "y": 0.2211,
+      "date": "2025-12-03"
+    },
+    {
+      "id": "voicethread-canvas",
+      "title": "Using VoiceThread in Canvas for Interactive Discussions",
+      "category": "AI & Technology",
+      "x": -0.354,
+      "y": -0.2413,
+      "date": "2025-12-10"
+    },
+    {
+      "id": "trauma-informed-pedagogy",
+      "title": "Trauma-Informed Pedagogy: Teaching With Care in Challenging Times",
+      "category": "Inclusion & Accessibility",
+      "x": -0.6144,
+      "y": -0.2545,
+      "date": "2025-12-17"
+    },
+    {
+      "id": "peer-instruction-computing",
+      "title": "Peer Instruction in Computing: Beyond Think-Pair-Share",
+      "category": "Teaching Strategies",
+      "x": -0.9759,
+      "y": -0.3883,
+      "date": "2025-12-24"
+    },
+    {
+      "id": "chatgpt-faculty-guide",
+      "title": "Empower Your Work with AI: A Beginner's Guide to ChatGPT for Faculty",
+      "category": "AI & Technology",
+      "x": -1.1208,
+      "y": -2.2118,
+      "date": "2025-12-31"
+    },
+    {
+      "id": "cut-paste-ai-prompts",
+      "title": "Cut and Paste AI Prompts for Teaching",
+      "category": "AI & Technology",
+      "x": -1.7194,
+      "y": -1.9076,
+      "date": "2026-01-15"
+    },
+    {
+      "id": "using-video-teaching",
+      "title": "Seven Ways to Use Video in Your Course",
+      "category": "Teaching Strategies",
+      "x": -0.2919,
+      "y": 1.2537,
+      "date": "2026-01-22"
+    },
+    {
+      "id": "building-student-relationships",
+      "title": "Building Relationships with Students: Practical Strategies",
+      "category": "Student Engagement",
+      "x": -0.3283,
+      "y": 1.6447,
+      "date": "2026-01-29"
+    },
+    {
+      "id": "end-semester-reflection",
+      "title": "The 6 Rs of Teaching Reflection",
+      "category": "Faculty Wellbeing",
+      "x": 1.356,
+      "y": 0.5492,
+      "date": "2026-02-05"
+    },
+    {
+      "id": "grade-review-policy",
+      "title": "Creating a Grade Review Policy That Works",
+      "category": "Assessment & Feedback",
+      "x": 2.7156,
+      "y": -0.7562,
+      "date": "2026-02-12"
+    },
+    {
+      "id": "backchanneling-classroom",
+      "title": "Using Backchannels to Enhance Classroom Discussion",
+      "category": "Teaching Strategies",
+      "x": -0.5093,
+      "y": -0.1016,
+      "date": "2026-02-19"
+    },
+    {
+      "id": "educause-horizon-2023",
+      "title": "Key Trends from the EDUCAUSE 2023 Horizon Report",
+      "category": "AI & Technology",
+      "x": -1.5522,
+      "y": 0.1208,
+      "date": "2026-02-26"
+    },
+    {
+      "id": "course-questionnaire-tips",
+      "title": "Writing Effective Course Evaluation Questions",
+      "category": "Assessment & Feedback",
+      "x": 0.3733,
+      "y": -0.7337,
+      "date": "2026-03-05"
+    },
+    {
+      "id": "open-educational-resources",
+      "title": "Open Educational Resources: Reducing Costs and Expanding Access",
+      "category": "Inclusion & Accessibility",
+      "x": -1.1956,
+      "y": -0.1626,
+      "date": "2026-03-12"
+    },
+    {
+      "id": "ta-checklist",
+      "title": "Working with Teaching Assistants: A Faculty Checklist",
+      "category": "Teaching Strategies",
+      "x": 0.4148,
+      "y": -2.0491,
+      "date": "2026-03-19"
+    },
+    {
+      "id": "hyflex-teaching",
+      "title": "HyFlex Teaching: Designing for Flexible Modalities",
+      "category": "Teaching Strategies",
+      "x": -1.2475,
+      "y": 0.9218,
+      "date": "2026-03-26"
+    },
+    {
+      "id": "microlectures-guide",
+      "title": "Creating Effective Microlectures",
+      "category": "Teaching Strategies",
+      "x": -0.1234,
+      "y": 1.4253,
+      "date": "2026-04-02"
+    }
+  ]
+}

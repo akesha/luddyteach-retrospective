@@ -1,0 +1,17 @@
+{
+  "ai_tools": ["ai", "chatgpt", "genai", "generative ai", "llm", "copilot", "automated", "prompt", "machine learning", "artificial intelligence", "gpt", "claude", "gemini", "large language model", "ai-generated", "ai tool"],
+  "active_learning": ["active learning", "think-pair-share", "group work", "peer instruction", "collaborative", "hands-on", "workshop", "in-class activity", "breakout", "team-based", "pair programming", "participatory", "cooperative learning"],
+  "assessment_design": ["rubric", "exam", "quiz", "grading", "mastery", "formative", "summative", "assessment", "testing", "grade", "evaluate", "evaluation", "learning outcome", "specification grading", "ungrading", "competency"],
+  "metacognition": ["metacognition", "reflection", "self-assessment", "learning how to learn", "self-regulation", "metacognitive", "think about thinking", "growth mindset", "mindset", "self-awareness", "learning process"],
+  "equity_inclusion": ["equity", "inclusion", "diversity", "accessible", "udl", "universal design", "belonging", "underrepresented", "inclusive", "title ii", "accommodation", "ada", "accessibility", "barrier", "marginalized", "non-major"],
+  "student_motivation": ["motivation", "engagement", "attendance", "participation", "relevance", "intrinsic", "extrinsic", "unmotivated", "disengaged", "incentive", "autonomy", "purpose", "value", "interest"],
+  "feedback_practices": ["feedback", "revision", "peer review", "critique", "debrief", "screencast", "comment", "suggestion", "tiered feedback", "mid-semester", "formative feedback", "constructive", "revision-based"],
+  "course_setup": ["syllabus", "first day", "course design", "learning objectives", "outcomes", "backward design", "first week", "semester start", "course structure", "prerequisite", "canvas page", "lms"],
+  "technology_tools": ["canvas", "video", "lms", "tools", "platform", "digital", "online", "zoom", "shiny", "posit", "google illuminate", "app", "software", "dashboard", "interactive"],
+  "faculty_development": ["professional development", "workshop", "conference", "mentoring", "mentor", "teaching assistant", "ta", "assistant instructor", "faculty", "instructor", "development", "training", "onboarding"],
+  "scaffolding": ["scaffold", "support", "prerequisite", "prior knowledge", "zone of proximal", "guided", "structured", "step-by-step", "chunking", "worked example", "model", "demo", "walkthrough"],
+  "student_wellbeing": ["stress", "anxiety", "mental health", "burnout", "wellbeing", "well-being", "trauma", "care", "compassion", "empathy", "joy", "flourishing", "hope", "resilience"],
+  "industry_connection": ["industry", "career", "internship", "professional", "real-world", "practitioner", "employer", "job", "workforce", "certification", "linkedin", "resume", "portfolio", "startup"],
+  "communication": ["communication", "discussion", "dialogue", "transparency", "clarity", "explain", "conversation", "tone", "language", "narrative", "storytelling", "writing"],
+  "evidence_based": ["research", "evidence", "study", "findings", "literature", "data-driven", "empirical", "meta-analysis", "published", "journal", "peer-reviewed", "scholarship", "theory", "framework"]
+}

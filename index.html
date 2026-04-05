@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuddyTeach: A Retrospective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Hero -->
+  <section id="hero" class="section hero">
+    <div class="hero-content">
+      <p class="hero-label">A DATA-DRIVEN RETROSPECTIVE</p>
+      <h1 class="hero-title">LuddyTeach</h1>
+      <p class="hero-subtitle">Evidence-based strategies for CS faculty, analyzed.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number" data-target="77">0</span>
+          <span class="stat-label">Posts</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="26374">0</span>
+          <span class="stat-label">Words</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="7">0</span>
+          <span class="stat-label">Categories</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="15">0</span>
+          <span class="stat-label">Months</span>
+        </div>
+      </div>
+      <div class="scroll-arrow">&#8595;</div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section id="intro" class="section content-section">
+    <div class="content-column">
+      <h2>What does a teaching blog look like from above?</h2>
+      <p>LuddyTeach began as a collection of practical, research-informed posts for computing and STEM educators. Over 77 posts and more than 26,000 words, the blog covered course design, assessment, AI integration, student engagement, and faculty wellbeing.</p>
+      <p>This retrospective applies six analytical methods to the full corpus, revealing patterns that aren't visible when reading posts one at a time: which themes dominate, how the conversation shifted over time, which ideas travel together, and which posts stand apart from the rest.</p>
+      <p>Every analytical choice is documented in the <a href="#methods">Methods</a> section. The data is available for <a href="#download">download</a>.</p>
+    </div>
+  </section>
+
+  <!-- Themes -->
+  <section id="themes" class="section content-section">
+    <div class="content-column">
+      <h2>The Seven Themes</h2>
+      <p>Each post belongs to one of seven categories assigned during writing. Here's how the corpus distributes across them.</p>
+    </div>
+    <div class="chart-container">
+      <div id="theme-chart"></div>
+    </div>
+    <div class="content-column">
+      <p class="chart-caption">Teaching Strategies and AI & Technology together account for more than half the corpus, reflecting the blog's dual focus on pedagogical practice and technological change.</p>
+    </div>
+  </section>
+
+  <!-- Streamgraph -->
+  <section id="streams" class="section content-section">
+    <div class="content-column">
+      <h2>Streams of Change</h2>
+      <p>How did the blog's focus shift over time? This streamgraph shows the relative prominence of each category across the blog's lifespan.</p>
+    </div>
+    <div class="chart-container wide">
+      <div id="stream-chart"></div>
+    </div>
+    <div class="content-column">
+      <p class="chart-caption">The stream reveals how different themes rose and fell. AI & Technology maintained a strong presence throughout, while other themes emerged in waves as the semester cycle and external events shaped the conversation.</p>
+    </div>
+  </section>
+
+  <!-- PCA Landscape -->
+  <section id="landscape" class="section content-section">
+    <div class="content-column">
+      <h2>The Landscape</h2>
+      <p>Every post was scored against 15 cross-cutting keyword dictionaries, then projected into two dimensions using Principal Component Analysis. Posts that land near each other share thematic DNA. Posts far apart are saying fundamentally different things.</p>
+    </div>
+    <div class="chart-container">
+      <div id="pca-chart"></div>
+    </div>
+    <div class="content-column">
+      <p class="chart-caption" id="pca-caption">Hover over any point to see which post it represents. Color indicates the assigned category.</p>
+    </div>
+  </section>
+
+  <!-- Correlations -->
+  <section id="correlations" class="section content-section">
+    <div class="content-column">
+      <h2>Alliances &amp; Rivalries</h2>
+      <p>Some themes naturally travel together; others rarely appear in the same post. This heatmap shows the correlation between all 15 keyword dictionaries across the corpus.</p>
+    </div>
+    <div class="chart-container">
+      <div id="corr-chart"></div>
+    </div>
+    <div class="content-column">
+      <p class="chart-caption">Red cells indicate themes that co-occur (alliances). Blue cells indicate themes that tend to appear in different posts (rivalries). Strong correlations reveal the blog's underlying intellectual structure.</p>
+    </div>
+  </section>
+
+  <!-- Novelty -->
+  <section id="novelty" class="section content-section">
+    <div class="content-column">
+      <h2>Surprise Conversations</h2>
+      <p>Novelty measures how much a post departs from what was typical in the corpus. High-novelty posts explored unusual combinations of themes or ventured into territory the blog rarely covered.</p>
+    </div>
+    <div class="chart-container">
+      <div id="novelty-chart"></div>
+    </div>
+    <div class="content-column">
+      <p class="chart-caption">The most novel posts often sit at the edges of the PCA landscape. The most typical posts anchor the center.</p>
+    </div>
+  </section>
+
+  <!-- Methods -->
+  <section id="methods" class="section content-section">
+    <div class="content-column">
+      <h2>Data &amp; Methods</h2>
+      <p>Transparency about how we got here.</p>
+
+      <h3>The Corpus</h3>
+      <p>77 blog posts from <a href="https://akesha.github.io/cs-faculty-hub/" target="_blank">LuddyTeach</a>, a teaching resource site for CS faculty. Each post includes full text, category, and metadata. Total corpus: 26,374 words.</p>
+
+      <h3>Thematic Scoring</h3>
+      <p>Each post was scored against 15 keyword dictionaries covering cross-cutting pedagogical concepts (AI tools, active learning, assessment design, metacognition, equity &amp; inclusion, and 10 more). Scores use term frequency normalized by post length, weighted by inverse document frequency (IDF) to emphasize distinctive rather than common terms.</p>
+
+      <h3>Principal Component Analysis</h3>
+      <p>The 77 &times; 15 scoring matrix was z-score standardized, then projected to two dimensions via PCA. The first two components capture the axes of greatest variation in the blog's thematic profile.</p>
+
+      <h3>Correlation Analysis</h3>
+      <p>Pearson correlations computed between all 105 theme pairs. Significance tested at p &lt; 0.05 with a minimum |r| &gt; 0.15 threshold.</p>
+
+      <h3>Novelty Scoring</h3>
+      <p>Composite of two measures: (1) Euclidean distance from the corpus centroid in z-score space, and (2) mean pairwise cosine distance to all other posts. Both normalized to [0, 1] and averaged.</p>
+
+      <h3>Streamgraph</h3>
+      <p>Posts binned into bi-monthly periods by publication date. Category counts stacked using D3's wiggle offset for visual clarity.</p>
+
+      <h3>Tools</h3>
+      <p>Analysis: Python (pandas, scikit-learn, scipy). Visualizations: D3.js v7. Site: static HTML/CSS/JS.</p>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="section content-section">
+    <div class="content-column">
+      <h2>Open Archive</h2>
+      <p>All data is available for download. Reproduce, challenge, or extend the analysis.</p>
+      <div class="download-grid">
+        <a href="data/posts.json" download class="download-card">
+          <strong>posts.json</strong>
+          <span>Full corpus with metadata, categories, word counts, and plain text</span>
+        </a>
+        <a href="data/theme_scores.json" download class="download-card">
+          <strong>theme_scores.json</strong>
+          <span>77 &times; 15 scoring matrix across all keyword dictionaries</span>
+        </a>
+        <a href="data/pca.json" download class="download-card">
+          <strong>pca.json</strong>
+          <span>2D coordinates, explained variance, and axis loadings</span>
+        </a>
+        <a href="data/correlations.json" download class="download-card">
+          <strong>correlations.json</strong>
+          <span>15 &times; 15 correlation matrix with significance flags</span>
+        </a>
+        <a href="data/novelty.json" download class="download-card">
+          <strong>novelty.json</strong>
+          <span>Per-post novelty scores ranked from most to least distinctive</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><a href="https://akesha.github.io/cs-faculty-hub/" target="_blank">LuddyTeach</a> by Dr. Akesha Horton</p>
+    <p class="footer-sub">Analysis: Python + scikit-learn &middot; Visualizations: D3.js v7 &middot; Built with Claude</p>
+  </footer>
+
+  <!-- Tooltip -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/themes.js"></script>
+  <script src="js/streamgraph.js"></script>
+  <script src="js/pca.js"></script>
+  <script src="js/correlations.js"></script>
+  <script src="js/novelty.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

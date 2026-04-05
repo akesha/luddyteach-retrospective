@@ -1,0 +1,24 @@
+{
+  "total_posts": 77,
+  "total_words": 26374,
+  "num_categories": 7,
+  "date_range": {
+    "start": "2025-01-10",
+    "end": "2026-04-02"
+  },
+  "avg_word_count": 342,
+  "categories": {
+    "Course Design": 7,
+    "Assessment & Feedback": 11,
+    "Teaching Strategies": 22,
+    "AI & Technology": 18,
+    "Faculty Wellbeing": 5,
+    "Student Engagement": 8,
+    "Inclusion & Accessibility": 6
+  },
+  "top_cross_cutting_themes": [
+    "Technology Tools",
+    "Assessment Design",
+    "Equity Inclusion"
+  ]
+}
