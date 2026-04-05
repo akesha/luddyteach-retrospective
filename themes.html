@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Seven Themes — LuddyTeach Retrospective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="has-nav">
+  <!-- Themes -->
+  <section id="themes" class="section content-section">
+    <div class="content-column">
+      <h2>The Seven Themes</h2>
+      <p>Each post belongs to one of seven categories assigned during writing. Here's how the corpus distributes across them.</p>
+    </div>
+    <div class="chart-container">
+      <div id="theme-chart"></div>
+    </div>
+    <div class="content-column">
+      <p class="chart-caption">Teaching Strategies and AI & Technology together account for more than half the corpus, reflecting the blog's dual focus on pedagogical practice and technological change.</p>
+    </div>
+  </section>
+
+  <!-- Vocabulary -->
+  <section id="vocabulary" class="section content-section">
+    <div class="content-column">
+      <h2>What Did LuddyTeach Talk About?</h2>
+      <p>Beyond the seven editorial categories, every post was scored against 15 cross-cutting keyword dictionaries. These dictionaries capture concepts that cut across categories &mdash; a Teaching Strategies post might score high on scaffolding, metacognition, and active learning all at once. The dictionaries fall into four conceptual clusters.</p>
+    </div>
+    <div class="chart-container wide">
+      <div id="vocab-chart"></div>
+    </div>
+    <div class="content-column">
+      <p class="chart-caption">Technology Tools leads by a wide margin, reflecting the blog's roots in a computing education department. Assessment Design and Equity &amp; Inclusion follow, anchoring the blog's dual commitment to rigorous evaluation and inclusive practice. Metacognition and Active Learning trail &mdash; not because they're absent, but because their vocabulary is more diffuse.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><a href="https://akesha.github.io/cs-faculty-hub/" target="_blank">LuddyTeach</a> by Dr. Akesha Horton</p>
+    <p class="footer-sub">Analysis: Python + scikit-learn &middot; Visualizations: D3.js v7 &middot; Built with Claude</p>
+  </footer>
+
+  <!-- Tooltip -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/themes.js"></script>
+  <script src="js/vocabulary.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    renderThemeChart();
+    renderVocabulary();
+  </script>
+</body>
+</html>

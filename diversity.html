@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thematic Diversity — LuddyTeach Retrospective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="has-nav">
+  <!-- Diversity -->
+  <section id="diversity" class="section content-section">
+    <div class="content-column">
+      <h2>How Broad Was Each Post?</h2>
+      <p>Some posts spread their energy across many themes (high diversity). Others concentrate on just one or two (low diversity). <strong>Shannon entropy</strong> captures this in a single number &mdash; a measure of how evenly a post's thematic energy is distributed.</p>
+    </div>
+    <div class="chart-container wide">
+      <div id="entropy-chart"></div>
+    </div>
+    <div class="content-column">
+      <p class="chart-caption" id="entropy-caption">Each dot is a post. The red line shows the moving average. Higher means more thematically diverse.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><a href="https://akesha.github.io/cs-faculty-hub/" target="_blank">LuddyTeach</a> by Dr. Akesha Horton</p>
+    <p class="footer-sub">Analysis: Python + scikit-learn &middot; Visualizations: D3.js v7 &middot; Built with Claude</p>
+  </footer>
+
+  <!-- Tooltip -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/entropy.js"></script>
+  <script src="js/nav.js"></script>
+  <script>renderEntropy();</script>
+</body>
+</html>

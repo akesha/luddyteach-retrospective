@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="has-nav">
   <!-- Hero -->
   <section id="hero" class="section hero">
     <div class="hero-content">
@@ -38,166 +38,48 @@
     </div>
   </section>
 
-  <!-- Introduction -->
+  <!-- Introduction + Navigation Cards -->
   <section id="intro" class="section content-section">
     <div class="content-column">
       <h2>What does a teaching blog look like from above?</h2>
       <p>LuddyTeach began as a collection of practical, research-informed posts for computing and STEM educators. Over 77 posts and more than 26,000 words, the blog covered course design, assessment, AI integration, student engagement, and faculty wellbeing.</p>
       <p>This retrospective applies six analytical methods to the full corpus, revealing patterns that aren't visible when reading posts one at a time: which themes dominate, how the conversation shifted over time, which ideas travel together, and which posts stand apart from the rest.</p>
-      <p>Every analytical choice is documented in the <a href="#methods">Methods</a> section. The data is available for <a href="#download">download</a>.</p>
-    </div>
-  </section>
 
-  <!-- Themes -->
-  <section id="themes" class="section content-section">
-    <div class="content-column">
-      <h2>The Seven Themes</h2>
-      <p>Each post belongs to one of seven categories assigned during writing. Here's how the corpus distributes across them.</p>
-    </div>
-    <div class="chart-container">
-      <div id="theme-chart"></div>
-    </div>
-    <div class="content-column">
-      <p class="chart-caption">Teaching Strategies and AI & Technology together account for more than half the corpus, reflecting the blog's dual focus on pedagogical practice and technological change.</p>
-    </div>
-  </section>
-
-  <!-- Vocabulary -->
-  <section id="vocabulary" class="section content-section">
-    <div class="content-column">
-      <h2>What Did LuddyTeach Talk About?</h2>
-      <p>Beyond the seven editorial categories, every post was scored against 15 cross-cutting keyword dictionaries. These dictionaries capture concepts that cut across categories &mdash; a Teaching Strategies post might score high on scaffolding, metacognition, and active learning all at once. The dictionaries fall into four conceptual clusters.</p>
-    </div>
-    <div class="chart-container wide">
-      <div id="vocab-chart"></div>
-    </div>
-    <div class="content-column">
-      <p class="chart-caption">Technology Tools leads by a wide margin, reflecting the blog's roots in a computing education department. Assessment Design and Equity &amp; Inclusion follow, anchoring the blog's dual commitment to rigorous evaluation and inclusive practice. Metacognition and Active Learning trail &mdash; not because they're absent, but because their vocabulary is more diffuse.</p>
-    </div>
-  </section>
-
-  <!-- Streamgraph -->
-  <section id="streams" class="section content-section">
-    <div class="content-column">
-      <h2>Streams of Change</h2>
-      <p>How did the blog's focus shift over time? This streamgraph shows the relative prominence of each category across the blog's lifespan.</p>
-    </div>
-    <div class="chart-container wide">
-      <div id="stream-chart"></div>
-    </div>
-    <div class="content-column">
-      <p class="chart-caption">The stream reveals how different themes rose and fell. AI & Technology maintained a strong presence throughout, while other themes emerged in waves as the semester cycle and external events shaped the conversation.</p>
-    </div>
-  </section>
-
-  <!-- PCA Landscape -->
-  <section id="landscape" class="section content-section">
-    <div class="content-column">
-      <h2>The Landscape</h2>
-      <p>Every post was scored against 15 cross-cutting keyword dictionaries, then projected into two dimensions using Principal Component Analysis. Posts that land near each other share thematic DNA. Posts far apart are saying fundamentally different things.</p>
-      <p>Hover over any dot to preview the post. Click to lock it in and see why it landed where it did, along with its thematic neighbors.</p>
-    </div>
-    <div class="chart-container wide">
-      <div id="pca-chart"></div>
-    </div>
-    <div class="content-column">
-      <p class="chart-caption" id="pca-caption">Hover over any point to see which post it represents. Color indicates the assigned category.</p>
-    </div>
-  </section>
-
-  <!-- Correlations -->
-  <section id="correlations" class="section content-section">
-    <div class="content-column">
-      <h2>Alliances &amp; Rivalries</h2>
-      <p>Some themes naturally travel together; others rarely appear in the same post. This network shows the significant correlations between all 15 keyword dictionaries. Green solid lines are alliances (themes that co-occur). Red dashed lines are rivalries (themes that trade off). Drag nodes to explore the structure.</p>
-    </div>
-    <div class="chart-container wide">
-      <div id="corr-chart"></div>
-    </div>
-  </section>
-
-  <!-- Diversity -->
-  <section id="diversity" class="section content-section">
-    <div class="content-column">
-      <h2>How Broad Was Each Post?</h2>
-      <p>Some posts spread their energy across many themes (high diversity). Others concentrate on just one or two (low diversity). <strong>Shannon entropy</strong> captures this in a single number &mdash; a measure of how evenly a post's thematic energy is distributed.</p>
-    </div>
-    <div class="chart-container wide">
-      <div id="entropy-chart"></div>
-    </div>
-    <div class="content-column">
-      <p class="chart-caption" id="entropy-caption">Each dot is a post. The red line shows the moving average. Higher means more thematically diverse.</p>
-    </div>
-  </section>
-
-  <!-- Novelty -->
-  <section id="novelty" class="section content-section">
-    <div class="content-column">
-      <h2>The Posts That Broke the Mold</h2>
-      <p>Novelty measures how far each post's thematic profile deviates from its neighbors in the corpus. The tallest bars are the posts that surprised &mdash; the ones that combined themes in ways the blog rarely did.</p>
-    </div>
-    <div class="chart-container wide">
-      <div id="novelty-chart"></div>
-    </div>
-  </section>
-
-  <!-- Methods -->
-  <section id="methods" class="section content-section">
-    <div class="content-column">
-      <h2>Data &amp; Methods</h2>
-      <p>Transparency about how we got here.</p>
-
-      <h3>The Corpus</h3>
-      <p>77 blog posts from <a href="https://akesha.github.io/cs-faculty-hub/" target="_blank">LuddyTeach</a>, a teaching resource site for CS faculty. Each post includes full text, category, and metadata. Total corpus: 26,374 words.</p>
-
-      <h3>Thematic Scoring</h3>
-      <p>Each post was scored against 15 keyword dictionaries covering cross-cutting pedagogical concepts (AI tools, active learning, assessment design, metacognition, equity &amp; inclusion, and 10 more). Scores use term frequency normalized by post length, weighted by inverse document frequency (IDF) to emphasize distinctive rather than common terms.</p>
-
-      <h3>Principal Component Analysis</h3>
-      <p>The 77 &times; 15 scoring matrix was z-score standardized, then projected to two dimensions via PCA. The first two components capture the axes of greatest variation in the blog's thematic profile.</p>
-
-      <h3>Correlation Analysis</h3>
-      <p>Pearson correlations computed between all 105 theme pairs. Significance tested at p &lt; 0.05 with a minimum |r| &gt; 0.15 threshold.</p>
-
-      <h3>Thematic Diversity (Shannon Entropy)</h3>
-      <p>Each post's theme scores are normalized to a probability distribution. Shannon entropy H = &minus;&Sigma; p&middot;log&sub2;(p) measures how evenly scores spread across themes. Normalized to [0, 1] where 1 = maximum diversity.</p>
-
-      <h3>Novelty Scoring</h3>
-      <p>Composite of two measures: (1) Euclidean distance from the corpus centroid in z-score space, and (2) mean pairwise cosine distance to all other posts. Both normalized to [0, 1] and averaged.</p>
-
-      <h3>Streamgraph</h3>
-      <p>Posts binned into bi-monthly periods by publication date. Category counts stacked using D3's wiggle offset for visual clarity.</p>
-
-      <h3>Tools</h3>
-      <p>Analysis: Python (pandas, scikit-learn, scipy). Visualizations: D3.js v7. Site: static HTML/CSS/JS.</p>
-    </div>
-  </section>
-
-  <!-- Download -->
-  <section id="download" class="section content-section">
-    <div class="content-column">
-      <h2>Open Archive</h2>
-      <p>All data is available for download. Reproduce, challenge, or extend the analysis.</p>
-      <div class="download-grid">
-        <a href="data/posts.json" download class="download-card">
-          <strong>posts.json</strong>
-          <span>Full corpus with metadata, categories, word counts, and plain text</span>
+      <div class="nav-cards">
+        <a href="themes.html" class="nav-card">
+          <span class="nav-card-number">01</span>
+          <span class="nav-card-title">The Seven Themes</span>
+          <span class="nav-card-desc">How the corpus distributes across categories, and what 15 cross-cutting dictionaries reveal.</span>
         </a>
-        <a href="data/theme_scores.json" download class="download-card">
-          <strong>theme_scores.json</strong>
-          <span>77 &times; 15 scoring matrix across all keyword dictionaries</span>
+        <a href="streams.html" class="nav-card">
+          <span class="nav-card-number">02</span>
+          <span class="nav-card-title">Streams of Change</span>
+          <span class="nav-card-desc">How the blog's focus shifted over time, visualized as a streamgraph.</span>
         </a>
-        <a href="data/pca.json" download class="download-card">
-          <strong>pca.json</strong>
-          <span>2D coordinates, explained variance, and axis loadings</span>
+        <a href="landscape.html" class="nav-card">
+          <span class="nav-card-number">03</span>
+          <span class="nav-card-title">The Landscape</span>
+          <span class="nav-card-desc">Every post projected into two dimensions via PCA. Click to explore thematic DNA.</span>
         </a>
-        <a href="data/correlations.json" download class="download-card">
-          <strong>correlations.json</strong>
-          <span>15 &times; 15 correlation matrix with significance flags</span>
+        <a href="correlations.html" class="nav-card">
+          <span class="nav-card-number">04</span>
+          <span class="nav-card-title">Alliances &amp; Rivalries</span>
+          <span class="nav-card-desc">Which themes travel together and which rarely share a post.</span>
         </a>
-        <a href="data/novelty.json" download class="download-card">
-          <strong>novelty.json</strong>
-          <span>Per-post novelty scores ranked from most to least distinctive</span>
+        <a href="diversity.html" class="nav-card">
+          <span class="nav-card-number">05</span>
+          <span class="nav-card-title">Thematic Diversity</span>
+          <span class="nav-card-desc">Shannon entropy measures how broadly each post spreads its energy.</span>
+        </a>
+        <a href="novelty.html" class="nav-card">
+          <span class="nav-card-number">06</span>
+          <span class="nav-card-title">Posts That Broke the Mold</span>
+          <span class="nav-card-desc">The posts that combined themes in ways the blog rarely did.</span>
+        </a>
+        <a href="methods.html" class="nav-card">
+          <span class="nav-card-number">07</span>
+          <span class="nav-card-title">Data &amp; Methods</span>
+          <span class="nav-card-desc">Transparency about analytical choices, plus downloadable data.</span>
         </a>
       </div>
     </div>
@@ -209,19 +91,8 @@
     <p class="footer-sub">Analysis: Python + scikit-learn &middot; Visualizations: D3.js v7 &middot; Built with Claude</p>
   </footer>
 
-  <!-- Tooltip -->
-  <div id="tooltip" class="tooltip"></div>
-
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="js/utils.js"></script>
   <script src="js/hero.js"></script>
-  <script src="js/themes.js"></script>
-  <script src="js/streamgraph.js"></script>
-  <script src="js/pca.js"></script>
-  <script src="js/vocabulary.js"></script>
-  <script src="js/correlations.js"></script>
-  <script src="js/entropy.js"></script>
-  <script src="js/novelty.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script>animateCounters();</script>
 </body>
 </html>

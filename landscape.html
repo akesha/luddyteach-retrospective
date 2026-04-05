@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Landscape — LuddyTeach Retrospective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="has-nav">
+  <!-- PCA Landscape -->
+  <section id="landscape" class="section content-section">
+    <div class="content-column">
+      <h2>The Landscape</h2>
+      <p>Every post was scored against 15 cross-cutting keyword dictionaries, then projected into two dimensions using Principal Component Analysis. Posts that land near each other share thematic DNA. Posts far apart are saying fundamentally different things.</p>
+      <p>Hover over any dot to preview the post. Click to lock it in and see why it landed where it did, along with its thematic neighbors.</p>
+    </div>
+    <div class="chart-container wide">
+      <div id="pca-chart"></div>
+    </div>
+    <div class="content-column">
+      <p class="chart-caption" id="pca-caption">Hover over any point to see which post it represents. Color indicates the assigned category.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><a href="https://akesha.github.io/cs-faculty-hub/" target="_blank">LuddyTeach</a> by Dr. Akesha Horton</p>
+    <p class="footer-sub">Analysis: Python + scikit-learn &middot; Visualizations: D3.js v7 &middot; Built with Claude</p>
+  </footer>
+
+  <!-- Tooltip -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/pca.js"></script>
+  <script src="js/nav.js"></script>
+  <script>renderPCA();</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts That Broke the Mold — LuddyTeach Retrospective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="has-nav">
+  <!-- Novelty -->
+  <section id="novelty" class="section content-section">
+    <div class="content-column">
+      <h2>The Posts That Broke the Mold</h2>
+      <p>Novelty measures how far each post's thematic profile deviates from its neighbors in the corpus. The tallest bars are the posts that surprised &mdash; the ones that combined themes in ways the blog rarely did.</p>
+    </div>
+    <div class="chart-container wide">
+      <div id="novelty-chart"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><a href="https://akesha.github.io/cs-faculty-hub/" target="_blank">LuddyTeach</a> by Dr. Akesha Horton</p>
+    <p class="footer-sub">Analysis: Python + scikit-learn &middot; Visualizations: D3.js v7 &middot; Built with Claude</p>
+  </footer>
+
+  <!-- Tooltip -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/novelty.js"></script>
+  <script src="js/nav.js"></script>
+  <script>renderNovelty();</script>
+</body>
+</html>

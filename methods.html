@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data &amp; Methods — LuddyTeach Retrospective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="has-nav">
+  <!-- Methods -->
+  <section id="methods" class="section content-section">
+    <div class="content-column">
+      <h2>Data &amp; Methods</h2>
+      <p>Transparency about how we got here.</p>
+
+      <h3>The Corpus</h3>
+      <p>77 blog posts from <a href="https://akesha.github.io/cs-faculty-hub/" target="_blank">LuddyTeach</a>, a teaching resource site for CS faculty. Each post includes full text, category, and metadata. Total corpus: 26,374 words.</p>
+
+      <h3>Thematic Scoring</h3>
+      <p>Each post was scored against 15 keyword dictionaries covering cross-cutting pedagogical concepts (AI tools, active learning, assessment design, metacognition, equity &amp; inclusion, and 10 more). Scores use term frequency normalized by post length, weighted by inverse document frequency (IDF) to emphasize distinctive rather than common terms.</p>
+
+      <h3>Principal Component Analysis</h3>
+      <p>The 77 &times; 15 scoring matrix was z-score standardized, then projected to two dimensions via PCA. The first two components capture the axes of greatest variation in the blog's thematic profile.</p>
+
+      <h3>Correlation Analysis</h3>
+      <p>Pearson correlations computed between all 105 theme pairs. Significance tested at p &lt; 0.05 with a minimum |r| &gt; 0.15 threshold.</p>
+
+      <h3>Thematic Diversity (Shannon Entropy)</h3>
+      <p>Each post's theme scores are normalized to a probability distribution. Shannon entropy H = &minus;&Sigma; p&middot;log&sub2;(p) measures how evenly scores spread across themes. Normalized to [0, 1] where 1 = maximum diversity.</p>
+
+      <h3>Novelty Scoring</h3>
+      <p>Composite of two measures: (1) Euclidean distance from the corpus centroid in z-score space, and (2) mean pairwise cosine distance to all other posts. Both normalized to [0, 1] and averaged.</p>
+
+      <h3>Streamgraph</h3>
+      <p>Posts binned into bi-monthly periods by publication date. Category counts stacked using D3's wiggle offset for visual clarity.</p>
+
+      <h3>Tools</h3>
+      <p>Analysis: Python (pandas, scikit-learn, scipy). Visualizations: D3.js v7. Site: static HTML/CSS/JS.</p>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="section content-section">
+    <div class="content-column">
+      <h2>Open Archive</h2>
+      <p>All data is available for download. Reproduce, challenge, or extend the analysis.</p>
+      <div class="download-grid">
+        <a href="data/posts.json" download class="download-card">
+          <strong>posts.json</strong>
+          <span>Full corpus with metadata, categories, word counts, and plain text</span>
+        </a>
+        <a href="data/theme_scores.json" download class="download-card">
+          <strong>theme_scores.json</strong>
+          <span>77 &times; 15 scoring matrix across all keyword dictionaries</span>
+        </a>
+        <a href="data/pca.json" download class="download-card">
+          <strong>pca.json</strong>
+          <span>2D coordinates, explained variance, and axis loadings</span>
+        </a>
+        <a href="data/correlations.json" download class="download-card">
+          <strong>correlations.json</strong>
+          <span>15 &times; 15 correlation matrix with significance flags</span>
+        </a>
+        <a href="data/novelty.json" download class="download-card">
+          <strong>novelty.json</strong>
+          <span>Per-post novelty scores ranked from most to least distinctive</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><a href="https://akesha.github.io/cs-faculty-hub/" target="_blank">LuddyTeach</a> by Dr. Akesha Horton</p>
+    <p class="footer-sub">Analysis: Python + scikit-learn &middot; Visualizations: D3.js v7 &middot; Built with Claude</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
