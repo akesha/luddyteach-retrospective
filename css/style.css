@@ -151,6 +151,62 @@ body {
   margin-top: 12px;
 }
 
+/* Stream toggle buttons */
+.stream-toggles {
+  max-width: 680px;
+  margin: 0 auto 24px;
+}
+.stream-toggle-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.stream-toggle-btn {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--cat-color);
+  border: 2px solid var(--cat-color);
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.2s, transform 0.1s;
+}
+.stream-toggle-btn.active {
+  opacity: 1;
+}
+.stream-toggle-btn:hover {
+  transform: scale(1.05);
+}
+.stream-controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.stream-control-btn {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.stream-control-btn:hover {
+  border-color: var(--color-text-secondary);
+  color: var(--color-text);
+}
+.stream-dots-area {
+  margin-top: 8px;
+}
+
 /* SVG defaults */
 svg text {
   font-family: var(--font-body);
