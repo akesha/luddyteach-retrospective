@@ -34,13 +34,6 @@ body {
 /* Sections */
 .section {
   padding: 80px 24px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Hero */
@@ -51,8 +44,6 @@ body {
   justify-content: center;
   text-align: center;
   background: linear-gradient(135deg, #faf5f0 0%, #f0e6de 50%, #e8ddd4 100%);
-  opacity: 1;
-  transform: none;
 }
 .hero-label {
   font-family: var(--font-body);
