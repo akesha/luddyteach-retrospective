@@ -1,4 +1,20 @@
-/* Interactive streamgraph — SLL-style with toggle buttons, theme timelines, and episode dots */
+/* Interactive streamgraph — SLL-style with clustered toggle buttons, theme timelines, and episode dots */
+
+// Organize categories into conceptual clusters (mirroring SLL's structure)
+const STREAM_CLUSTERS = {
+  "The Craft": {
+    color: "#9B2335",
+    categories: ["Teaching Strategies", "Course Design", "Assessment & Feedback"]
+  },
+  "The People": {
+    color: "#C47F29",
+    categories: ["Student Engagement", "Inclusion & Accessibility", "Faculty Wellbeing"]
+  },
+  "The Tech": {
+    color: "#2A6496",
+    categories: ["AI & Technology"]
+  }
+};
 
 async function renderStreamgraph() {
   const raw = await loadJSON("data/streamgraph.json");
@@ -9,35 +25,53 @@ async function renderStreamgraph() {
   const container = document.getElementById("stream-chart");
   const width = Math.min(container.clientWidth, 900);
 
-  // --- Category toggle buttons ---
+  // --- Clustered toggle buttons ---
   const toggleArea = document.createElement("div");
   toggleArea.className = "stream-toggles";
   container.appendChild(toggleArea);
 
   const activeCategories = new Set(categories);
+  const allButtons = [];
 
-  // Build toggle grid
-  const toggleGrid = document.createElement("div");
-  toggleGrid.className = "stream-toggle-grid";
-  toggleArea.appendChild(toggleGrid);
+  // Build cluster rows
+  Object.entries(STREAM_CLUSTERS).forEach(([clusterName, cluster]) => {
+    const row = document.createElement("div");
+    row.className = "stream-cluster-row";
 
-  categories.forEach(cat => {
-    const btn = document.createElement("button");
-    btn.className = "stream-toggle-btn active";
-    btn.style.setProperty("--cat-color", catColor(cat));
-    btn.innerHTML = cat;
-    btn.dataset.category = cat;
-    btn.addEventListener("click", () => {
-      if (activeCategories.has(cat)) {
-        activeCategories.delete(cat);
-        btn.classList.remove("active");
-      } else {
-        activeCategories.add(cat);
-        btn.classList.add("active");
-      }
-      updateAll();
+    const label = document.createElement("div");
+    label.className = "stream-cluster-label";
+    label.style.color = cluster.color;
+    label.textContent = clusterName.toUpperCase();
+    row.appendChild(label);
+
+    const btnGroup = document.createElement("div");
+    btnGroup.className = "stream-cluster-buttons";
+
+    cluster.categories.forEach(cat => {
+      const btn = document.createElement("button");
+      btn.className = "stream-toggle-btn active";
+      btn.style.setProperty("--cat-color", catColor(cat));
+      btn.dataset.category = cat;
+
+      // Checkmark + label
+      btn.innerHTML = `<span class="stream-btn-check">✓</span>${cat}`;
+
+      btn.addEventListener("click", () => {
+        if (activeCategories.has(cat)) {
+          activeCategories.delete(cat);
+          btn.classList.remove("active");
+        } else {
+          activeCategories.add(cat);
+          btn.classList.add("active");
+        }
+        updateAll();
+      });
+      btnGroup.appendChild(btn);
+      allButtons.push(btn);
     });
-    toggleGrid.appendChild(btn);
+
+    row.appendChild(btnGroup);
+    toggleArea.appendChild(row);
   });
 
   // Show All / Remove All buttons
@@ -51,12 +85,12 @@ async function renderStreamgraph() {
 
   document.getElementById("stream-show-all").addEventListener("click", () => {
     categories.forEach(c => activeCategories.add(c));
-    toggleGrid.querySelectorAll(".stream-toggle-btn").forEach(b => b.classList.add("active"));
+    allButtons.forEach(b => b.classList.add("active"));
     updateAll();
   });
   document.getElementById("stream-remove-all").addEventListener("click", () => {
     activeCategories.clear();
-    toggleGrid.querySelectorAll(".stream-toggle-btn").forEach(b => b.classList.remove("active"));
+    allButtons.forEach(b => b.classList.remove("active"));
     updateAll();
   });
 
@@ -77,6 +111,15 @@ async function renderStreamgraph() {
     .domain(data.map(d => d.period))
     .range([margin.left, width - margin.right]);
 
+  // --- "Back in Time / Forward in Time" labels ---
+  const timeLabels = document.createElement("div");
+  timeLabels.className = "stream-time-labels";
+  timeLabels.innerHTML = `
+    <span class="stream-time-label">&larr; Back in Time</span>
+    <span class="stream-time-label">Forward in Time &rarr;</span>
+  `;
+  container.appendChild(timeLabels);
+
   // --- Timeline section (per-theme areas + episode dots) ---
   const timelineDiv = document.createElement("div");
   timelineDiv.className = "stream-timeline";
@@ -85,11 +128,11 @@ async function renderStreamgraph() {
   // Sort posts by date
   const sortedPosts = [...posts].filter(p => p.date).sort((a, b) => a.date.localeCompare(b.date));
   const dateExtent = d3.extent(sortedPosts, d => new Date(d.date));
-  // Pad the extent slightly
   const datePad = (dateExtent[1] - dateExtent[0]) * 0.02;
+  const timelineLeft = 140;
   const xDate = d3.scaleTime()
     .domain([new Date(dateExtent[0].getTime() - datePad), new Date(dateExtent[1].getTime() + datePad)])
-    .range([60, width - 20]);
+    .range([timelineLeft, width - 20]);
 
   function updateAll() {
     updateStreamgraph();
@@ -203,8 +246,6 @@ async function renderStreamgraph() {
     const activeCats = categories.filter(c => activeCategories.has(c));
 
     // Build a per-category density area for each active category
-    // Count posts per week for smoother curves
-    const weekMs = 7 * 24 * 60 * 60 * 1000;
     const startDate = xDate.domain()[0].getTime();
     const endDate = xDate.domain()[1].getTime();
 
@@ -219,16 +260,17 @@ async function renderStreamgraph() {
         .attr("width", width)
         .attr("height", rowHeight);
 
-      // Category label
+      // Category label — positioned as a proper row header
       rowSvg.append("text")
-        .attr("x", 4)
+        .attr("x", timelineLeft - 12)
         .attr("y", rowHeight / 2 + 4)
-        .attr("font-size", 10)
+        .attr("text-anchor", "end")
+        .attr("font-size", 12)
         .attr("fill", catColor(cat))
         .attr("font-weight", 500)
-        .text(cat.length > 18 ? cat.slice(0, 16) + "…" : cat);
+        .text(cat);
 
-      // Build density: count posts in sliding windows
+      // Build density with triangle kernel
       const numBins = 40;
       const binWidth = (endDate - startDate) / numBins;
       const kernelRadius = binWidth * 2;
@@ -240,7 +282,7 @@ async function renderStreamgraph() {
           const pt = new Date(p.date).getTime();
           const dist = Math.abs(pt - t);
           if (dist < kernelRadius) {
-            count += 1 - dist / kernelRadius; // triangle kernel
+            count += 1 - dist / kernelRadius;
           }
         });
         density.push({ t: new Date(t), v: count });
@@ -278,11 +320,12 @@ async function renderStreamgraph() {
       .attr("width", width)
       .attr("height", dotsHeight);
 
-    // "All Posts" label
+    // "All Posts" label — right-aligned to match theme labels
     dotsSvg.append("text")
-      .attr("x", 4)
+      .attr("x", timelineLeft - 12)
       .attr("y", 24)
-      .attr("font-size", 10)
+      .attr("text-anchor", "end")
+      .attr("font-size", 11)
       .attr("fill", "#bbb")
       .text("All Posts");
 
@@ -291,7 +334,7 @@ async function renderStreamgraph() {
     years.forEach(yr => {
       const firstOfYear = new Date(yr + "-01-01");
       const xPos = xDate(firstOfYear);
-      if (xPos >= 60 && xPos <= width - 20) {
+      if (xPos >= timelineLeft && xPos <= width - 20) {
         dotsSvg.append("line")
           .attr("x1", xPos).attr("y1", 0)
           .attr("x2", xPos).attr("y2", dotsHeight)
@@ -304,7 +347,7 @@ async function renderStreamgraph() {
       }
     });
 
-    // Draw episode dots — colored if active, gray if not
+    // Draw episode dots
     dotsSvg.selectAll(".ep-dot")
       .data(sortedPosts)
       .join("circle")
