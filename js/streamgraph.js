@@ -129,7 +129,7 @@ async function renderStreamgraph() {
   const sortedPosts = [...posts].filter(p => p.date).sort((a, b) => a.date.localeCompare(b.date));
   const dateExtent = d3.extent(sortedPosts, d => new Date(d.date));
   const datePad = (dateExtent[1] - dateExtent[0]) * 0.02;
-  const timelineLeft = 140;
+  const timelineLeft = 170;
   const xDate = d3.scaleTime()
     .domain([new Date(dateExtent[0].getTime() - datePad), new Date(dateExtent[1].getTime() + datePad)])
     .range([timelineLeft, width - 20]);
